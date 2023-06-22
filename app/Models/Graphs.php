@@ -10,5 +10,5 @@
      use HasFactory;
 
      protected $table = 'graphs_page';
-     protected $fillable = ['image', 'content','sequence_no'];
+     protected $fillable = ['image', 'content','sequence_no','name','designation','facebook','twitter','instagram','linkedin'];
  }

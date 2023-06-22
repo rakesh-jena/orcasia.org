@@ -14,6 +14,10 @@
     .black {
         color:#000!important;
     }
+    .imageheighter {
+        min-height:13rem;
+        max-height:13rem;
+    }
   
   </style>
 
@@ -24,7 +28,8 @@
           <!-- Intro -->
           <div class="basic-intro text-center mb-5">
             <h1 class="title black">
-              <span class="text-1 text-style-5">INFOGRAPHICS</span>
+              <span class="text-1 text-style-5">INFOGRAPHICS</span><br>
+              <span class="text-style-11">We present visualisations of quantitative data to track the rise of China and make assessments according to our findings.</span>
               
             </h1>
           </div>
@@ -48,7 +53,7 @@
             <div class="col-12 col-md-6 col-lg-4">
               <div class="card has-image shadow parent">
                 <!-- Image -->
-                <div class="image-wrapper hover-zoom">
+                <div class="image-wrapper imageheighter hover-zoom">
                   <img src="{{URL::asset('images/article/'.$article->title_image)}}" alt="Image name" class="image" />
                 </div>
                 <!-- Body -->
@@ -61,16 +66,7 @@
                   <h3 class="title mt-1 text-style-11 black">{{$article->title}}</h3>
                   <p class="description black line-clamp-3">{{$article->subtitle}}</p>
                   <!-- Button -->
-                  <div class="button-wrapper align-h-right">
-                    <span class="button arrow-button next scheme-1 primary">
-                      <span class="arrow">
-                        <span class="item"></span>
-                        <span class="item"></span>
-                      </span>
-                      <span class="line"></span>
-                      <span class="text">RIGHT ARROW</span>
-                    </span> 
-                  </div>
+                  
                 </div>
                 <!-- Link -->
                <a href="{{url('infographics/'.$article->slug)}}" class="full-link"></a>

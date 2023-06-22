@@ -475,12 +475,12 @@
                               Mapping China
                               </button>
                            </li>
-                          <!-- <li class="nav-item" role="presentation">
+                      <li class="nav-item" role="presentation">
                               <button id="elements-5-tab" class="title nav-link" aria-selected="false"
                                  aria-controls="elements-5" data-bs-target="#elements-5" data-bs-toggle="tab" role="tab">
                               Infographics
                               </button>
-                           </li> -->
+                           </li>
                         </ul>
                         <!-- Tab content -->
                         <div class="tab-content">
@@ -753,94 +753,49 @@
                         </div>
                             <div id="elements-5" class="tab-pane fade" role="tabpanel">
                            <div class="row g-3">
-                              <div class="col-12 col-md-6 col-lg-3">
-                                 <div class="megamenu-item">
-                                    <ul class="nav-list list-unstyled">
-                                       <li class="nav-item">
-                                          <a href="{{url('pages/india-china-trade-dashboard')}}" class="nav-link parent">
-                                             <span class="text">INDIA-CHINA TRADE DASHBOARD</span>
-                                          </a>
-                                          <div class="card has-full-image mt-05 vh-25 small-shadow rounded parent">
-                                             <div class="bricklayer-column" bis_skin_checked="1">
-                                                <a href="{{url('pages/india-china-trade-dashboard')}}" class="item active lightbox-link">
-                                                   <div class="text-wrapper text-center" bis_skin_checked="1"></div>
-                                                   <div class="image-wrapper shadow rounded" bis_skin_checked="1">
-                                                         <div class="overlay black-50" bis_skin_checked="1"></div>
-                                                         <img src="{{URL::asset('images/jpg/dashboard1.png')}}" class="image" alt="India China Trade Dashboard">
-                                                   </div>       
-                                                </a>
-                                             </div>
-                                          </div>   
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <div class="col-12 col-md-6 col-lg-3">
-                                 <div class="megamenu-item">
-                                    <ul class="nav-list list-unstyled">
-                                       <li class="nav-item">
-                                          <a href="{{url('pages/india-china-trade-dashboard')}}" class="nav-link parent">
-                                             <span class="text">INDIA-CHINA TRADE DASHBOARD</span>
-                                          </a>
-                                          <div class="card has-full-image mt-05 vh-25 small-shadow rounded parent">
-                                             <div class="bricklayer-column" bis_skin_checked="1">
-                                                <a href="{{url('pages/india-china-trade-dashboard')}}" class="item active lightbox-link">
-                                                   <div class="text-wrapper text-center" bis_skin_checked="1"></div>
-                                                   <div class="image-wrapper shadow rounded" bis_skin_checked="1">
-                                                         <div class="overlay black-50" bis_skin_checked="1"></div>
-                                                         <img src="{{URL::asset('images/jpg/dashboard1.png')}}" class="image" alt="India China Trade Dashboard">
-                                                   </div>       
-                                                </a>
-                                             </div>
-                                          </div>   
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <div class="col-12 col-md-6 col-lg-3">
-                                 <div class="megamenu-item">
-                                    <ul class="nav-list list-unstyled">
-                                       <li class="nav-item">
-                                          <a href="{{url('pages/india-china-trade-dashboard')}}" class="nav-link parent">
-                                             <span class="text">INDIA-CHINA TRADE DASHBOARD</span>
-                                          </a>
-                                          <div class="card has-full-image mt-05 vh-25 small-shadow rounded parent">
-                                             <div class="bricklayer-column" bis_skin_checked="1">
-                                                <a href="{{url('pages/india-china-trade-dashboard')}}" class="item active lightbox-link">
-                                                   <div class="text-wrapper text-center" bis_skin_checked="1"></div>
-                                                   <div class="image-wrapper shadow rounded" bis_skin_checked="1">
-                                                         <div class="overlay black-50" bis_skin_checked="1"></div>
-                                                         <img src="{{URL::asset('images/jpg/dashboard1.png')}}" class="image" alt="India China Trade Dashboard">
-                                                   </div>       
-                                                </a>
-                                             </div>
-                                          </div>   
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                              <div class="col-12 col-md-6 col-lg-3">
-                                 <div class="megamenu-item">
-                                    <ul class="nav-list list-unstyled">
-                                       <li class="nav-item">
-                                          <a href="{{url('pages/india-china-trade-dashboard')}}" class="nav-link parent">
-                                             <span class="text">INDIA-CHINA TRADE DASHBOARD</span>
-                                          </a>
-                                          <div class="card has-full-image mt-05 vh-25 small-shadow rounded parent">
-                                             <div class="bricklayer-column" bis_skin_checked="1">
-                                                <a href="{{url('pages/india-china-trade-dashboard')}}" class="item active lightbox-link">
-                                                   <div class="text-wrapper text-center" bis_skin_checked="1"></div>
-                                                   <div class="image-wrapper shadow rounded" bis_skin_checked="1">
-                                                         <div class="overlay black-50" bis_skin_checked="1"></div>
-                                                         <img src="{{URL::asset('images/jpg/dashboard1.png')}}" class="image" alt="India China Trade Dashboard">
-                                                   </div>       
-                                                </a>
-                                             </div>
-                                          </div>   
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
+                               <div class="col-12 col-md-6 col-lg-4">
+                                                   <div class="megamenu-item">
+                                                      <h6 class="title">Infographics</h6>
+                                                      <ul class="nav-list list-unstyled">
+                                                         <li class="nav-item">
+                                                            <a href="{{url('pages/infographics')}}" class="nav-link parent">
+                                                            <span class="text">Explore all</span>
+                                                            </a>
+                                                         </li>
+                                                        
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                   <?php $latest_articles = App\Models\Article::select('id','author_id','category','read_time','title','slug','subtitle','title_image','created_at')->whereIn('category', array('35'))->where('status', 'approved')->orderBy('created_at', 'desc')->limit(2)->get();
+                            ?>
+                            @foreach($latest_articles as $article)
+                            <?php $category = App\Models\Category::where('id',$article->category)->first();
+                            $author_id = unserialize($article->author_id);
+                            $author = App\Models\User::where('id', $author_id)->first()
+                            ?>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card has-image shadow parent">
+                <!-- Image -->
+                <div class="image-wrapper imageheighter hover-zoom">
+                  <img src="{{URL::asset('images/article/'.$article->title_image)}}" alt="Image name" class="image" />
+                </div>
+                <!-- Body -->
+                <div class="card-body bg-color white">
+                                        
+                      <span class="badge outline primary primary-hover">
+                        <span class="badge-text black-75 white-hover">{{$category->category}}</span>
+                      </span>
+                   
+                  <h3 class="title mt-1 text-style-11 black">{{$article->title}}</h3>
+                  <p class="description black line-clamp-3">{{$article->subtitle}}</p>
+                  <!-- Button -->
+                  
+                </div>
+                <!-- Link -->
+               <a href="{{url('infographics/'.$article->slug)}}" class="full-link"></a>
+              </div>
+            </div>
+                @endforeach
                            </div>
                         </div>
                                        

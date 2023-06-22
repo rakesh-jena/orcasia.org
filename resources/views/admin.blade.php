@@ -199,16 +199,16 @@
             </li><!-- End All Users Nav -->
             
             
-          <!--   <li class="nav-item">
+        <li class="nav-item">
                  @if(request()->is('yn-admin/graphsPage'))
                  <a class="nav-link" href="{{url('yn-admin/graphsPage')}}">
                  @else
                  <a class="nav-link collapsed" href="{{url('yn-admin/graphsPage')}}">
                  @endif
                      <i class="bi bi-people"></i>
-                     <span>Infographics Page</span>
+                     <span>Team Page</span>
                  </a>
-             </li><!-- End GraphsPage Nav -->
+             </li>
 
              <li class="nav-item">
                  @if(request()->is('yn-admin/fileUpload'))
