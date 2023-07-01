@@ -13,6 +13,9 @@
 .js-auto-width-wrapper {
     overflow:hidden;
 }
+.description {
+    color:#000;
+}
 </style>
 
  <!-- Banner -->
@@ -65,7 +68,7 @@
               <i class="fas fa-3x fa-users-cog" style="color: #fff;"></i>
               
               <h3 class="title text-style-11 white">To build</h3>
-              <p class="description">Knowledge, interest and understanding across sectors, professionals and laypeople regarding China’s innate perceptions of —and responses to—Asia and especially India</p>
+              <p class="description white">Knowledge, interest and understanding across sectors, professionals and laypeople regarding China’s innate perceptions of —and responses to—Asia and especially India</p>
               <!-- Button -->
               <div class="button-wrapper align-h-right">
                 
@@ -82,7 +85,7 @@
             <div class="card-body">
               <i class="fas fa-3x fa-chart-line" style="color: #fff;"></i>
               <h3 class="title text-style-11 white">To assess</h3>
-              <p class="description">Data/resources that narrate the daily ‘chatter’ of China’s domestic circles on happenings both within China and involving China beyond its own borders.</p>
+              <p class="description white">Data/resources that narrate the daily ‘chatter’ of China’s domestic circles on happenings both within China and involving China beyond its own borders.</p>
               <!-- Button -->
               <div class="button-wrapper align-h-right">
                 
@@ -99,7 +102,7 @@
             <div class="card-body">
               <i class="fas fa-3x fa-link" style="color: #fff;"></i>
               <h3 class="title text-style-11 white">To link</h3>
-              <p class="description">Data with the broader political, diplomatic, cultural, economic and social developments taking place and their impact on India’s national security, regional power, and India-China ties. </p>
+              <p class="description white">Data with the broader political, diplomatic, cultural, economic and social developments taking place and their impact on India’s national security, regional power, and India-China ties. </p>
               <!-- Button -->
               <div class="button-wrapper align-h-right">
                 
@@ -116,7 +119,7 @@
             <div class="card-body">
               <i class="fas fa-3x fa-user-shield" style="color: #fff;"></i>
               <h3 class="title text-style-11 white">To ensure</h3>
-              <p class="description">The venture emerges as a go-to resource tool for policymakers, scholars, students and enthusiasts alike.</p>
+              <p class="description white">The venture emerges as a go-to resource tool for policymakers, scholars, students and enthusiasts alike.</p>
               <!-- Button -->
               <div class="button-wrapper align-h-right">
                 
@@ -133,7 +136,7 @@
             <div class="card-body">
               <i class="fas fa-3x fa-cogs" style="color: #fff;"></i>
               <h3 class="title text-style-11 white">To implement</h3>
-              <p class="description">Research and data from social media ‘chatter’ in China to dedicated subsections focused on India and its concerns</p>
+              <p class="description white">Research and data from social media ‘chatter’ in China to dedicated subsections focused on India and its concerns</p>
               <!-- Button -->
               <div class="button-wrapper align-h-right">
                 
@@ -150,7 +153,7 @@
             <div class="card-body">
               <i class="fas fa-3x fa-laptop" style="color: #fff;"></i>
               <h3 class="title text-style-11 white">To publish</h3>
-              <p class="description">Daily newsletters, monthly reports and frequent publications that are dedicated to deciphering broader strategic chatter and data</p>
+              <p class="description white">Daily newsletters, monthly reports and frequent publications that are dedicated to deciphering broader strategic chatter and data</p>
               <!-- Button -->
               <div class="button-wrapper align-h-right">
                 

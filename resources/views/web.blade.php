@@ -16,6 +16,7 @@
       <meta name="description" content="@yield('meta_description','default description')">
       <meta name="author" content="Codings">
       <meta name="keywords" content="@yield('meta_keywords','some default keywords')">
+      <meta name="twitter:card" content="summary_large_image">
       @yield('meta')
    
       
@@ -812,6 +813,11 @@
                <span class="text">Events</span>
                </a>
                </li>
+                <li class="nav-item has-megamenu hover">
+               <a class="nav-link dropdown-toggle has-icon" href="{{url('pages/contact')}}">
+               <span class="text">Contact</span>
+               </a>
+               </li>
             </ul>
             <ul class="navbar-nav navbar-icons">
             <!-- Cart icon -->
@@ -876,58 +882,23 @@
                               <div class="megamenu-item">
                                  <h6 class="title">Popular searches</h6>
                                  <!-- Tag Cloud -->
-                                 <div class="tag-cloud">
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Environment</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline active gray-50 primary-hover floating-item-smooth">
-                                    <span class="badge-text gray white-hover">Events</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Technology</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Web</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Mobile</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Design</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Branding</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Development</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Artificial</span>
-                                    </span>
-                                    </a>
-                                    <a href="#your-link" class="link">                      
-                                    <span class="badge outline gray-50 primary-hover">
-                                    <span class="badge-text gray white-hover">Intelligence</span>
-                                    </span>
-                                    </a>
-                                 </div>
+                                    <?php
+                                    
+                                    use App\Models\Tag;
+                                    
+                                    $tags = Tag::all();
+                                    
+                                    echo '<div class="tag-cloud">';
+                                    foreach ($tags as $tag) {
+                                        echo '<a href="' . route('tag.show', ['slug' => $tag->slug]) . '" class="link">                      
+                                                  <span class="badge outline gray-50 primary-hover">
+                                                      <span class="badge-text gray white-hover">' . $tag->tag . '</span>
+                                                  </span>
+                                              </a>';
+                                    }
+                                    echo '</div>';
+                                    ?>
+
                               </div>
                            </div>
                            <!-- Search Form -->

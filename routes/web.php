@@ -18,7 +18,9 @@ use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\MissionController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\GraphsController;
- use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -156,6 +158,10 @@ Route::get('/pages/onv', function () {
     return view('onv');
 });
 
+Route::get('/pages/share', function () {
+    return view('share');
+});
+
 Route::get('/pages/submission', function () {
     return view('submission');
 });
@@ -214,6 +220,25 @@ Route::get('/pages/infographics', function () {
     return view('infographics');
 });
 
+
+/**
+ * ------------------------------------------------------------------------
+ * ORCA Contact form
+ * ------------------------------------------------------------------------
+ * */
+ 
+ 
+ Route::get('/pages/contact', function () {
+    return view('contact');
+});
+
+ Route::get('/pages/test', function () {
+    return view('test');
+});
+
+// tags
+
+Route::get('tag/{slug}', 'TagController@show')->name('tag.show');
 
 
 

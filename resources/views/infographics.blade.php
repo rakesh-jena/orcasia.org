@@ -29,7 +29,7 @@
           <div class="basic-intro text-center mb-5">
             <h1 class="title black">
               <span class="text-1 text-style-5">INFOGRAPHICS</span><br>
-              <span class="text-style-11">We present visualisations of quantitative data to track the rise of China and make assessments according to our findings.</span>
+              <span class="text-style-12">We present visualisations of quantitative data to track the rise of China and make assessments according to our findings.</span>
               
             </h1>
           </div>

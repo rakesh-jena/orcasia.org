@@ -59,7 +59,7 @@
         <!-- Intro -->
         <div class="basic-intro text-center">
           <h1 class="title black">
-            <span class="text-1 d-block text-style-2">ORCA Files</span>
+            <span class="text-1 d-block text-style-2">The ORCA Files</span>
 
           </h1>
           <div class="description gray">

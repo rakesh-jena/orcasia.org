@@ -8,6 +8,7 @@
 <meta property="og:title" content="{{$article->title}}" />
 <meta property="og:description" content="{{$article->introduction}}" />
 <meta property="og:image" content="{{URL::asset('images/article/'.$article->title_image)}}" />
+<meta name="twitter:card" content="summary_large_image">
 @endsection
 
 @section('content')
