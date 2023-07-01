@@ -18,6 +18,8 @@
           <!-- Example -->
           <div class="basic-intro mb-2">
             <h2 class="title gray-50 text-style-5">Contact ORCA</h2>
+            <p class="description">Address: A-5, Second Floor, Block A, Church Rd, near Victoria Terrace, Shanti Kunj Main, Vasant Kunj, New Delhi, 110070.</p>
+            <p>We can't wait to see you at our office: <a target="_blank" href="https://goo.gl/maps/4sWdiPScZa7VsBX3A">Navigate on Google Maps</a></p>
             <hr class="gray-25">
           </div>
           <div class="form-area mb-35 scheme-1 primary">
