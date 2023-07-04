@@ -68,13 +68,12 @@ class CategoryController extends Controller
     public function show($slug)
     {   
         $category = Category::where('slug', $slug)->first();
-        //dd($category);
         if($slug == 'cicm'){
-            $currentDate = date("Y-m-d H:i:s");
+            $currentDate = date("Y-m-d");
             $firstDateOfMonth  = date('Y-m-01 H:i:s', strtotime($currentDate));
             
-            $articles = Article::select('id', 'tags', 'category', 'title', 'subtitle', 'slug', 'created_at', 'title_image', 'author_id')->where('created_at', '>', $firstDateOfMonth)->where('category', $category['id'])->orderBy('created_at', 'desc')->get();
-            //dd($articles);
+            $articles = Article::select('id', 'tags', 'category', 'title', 'subtitle', 'slug', 'created_at', 'title_image', 'author_id')->where('category', $category['id'])->orderBy('created_at', 'desc')->get();
+            // dd($articles);
 
             $currentFormatedYear = date('Y');
             $monthsYearArticle = array();

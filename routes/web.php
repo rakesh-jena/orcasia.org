@@ -20,6 +20,8 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\GraphsController;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Event\PartnerController;
+
 
 
 /*
@@ -77,6 +79,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('yn-admin/graphsPage', GraphsController::class);
     Route::post('check-graph', [GraphsController::class,'check_if_used']);
     Route::resource('yn-admin/fileUpload', FileUploadController::class);
+    Route::resource('yn-admin/event/partner', PartnerController::class);
 });
 
 /**

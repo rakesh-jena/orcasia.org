@@ -220,7 +220,39 @@
                      <span>File Uploader</span>
                  </a>
              </li><!-- End GraphsPage Nav -->
-
+             <li class="nav-item">
+                @if(str_contains(url()->current(), '/yn-admin/event'))
+                <a class="nav-link" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
+                @else
+                <a class="nav-link collapsed" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                @endif
+                    <i class="bi bi-journal-text"></i>
+                    <span>Event</span>
+                    <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="event-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/event')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
+                    <li>
+                        <a href="{{url('yn-admin/event/partner')}}" class="<?=(request()->is('yn-admin/event/partner')) ? 'active' : '';?>">
+                            <i class="bi bi-circle"></i><span>Partner</span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="{{url('yn-admin/event/about')}}" class="<?=(request()->is('yn-admin/event/about')) ? 'active' : '';?>">
+                            <i class="bi bi-circle"></i><span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="{{url('yn-admin/event/speaker')}}" class="<?=(request()->is('yn-admin/event/speaker')) ? 'active' : '';?>">
+                            <i class="bi bi-circle"></i><span>Speaker</span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="{{url('yn-admin/event/media')}}" class="<?=(request()->is('yn-admin/event/media')) ? 'active' : '';?>">
+                            <i class="bi bi-circle"></i><span>Media</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Event Nav -->
          <!--   <li class="nav-item">
                 @if(str_contains(url()->current(), '/yn-admin/profiles'))
                 <a class="nav-link" data-bs-target="#profiles-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
