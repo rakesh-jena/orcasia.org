@@ -24,6 +24,7 @@ use App\Http\Controllers\Event\PartnerController;
 use App\Http\Controllers\Event\AboutController;
 use App\Http\Controllers\Event\SpeakerController;
 use App\Http\Controllers\Event\MediaController;
+use App\Http\Controllers\Event\ScheduleController;
 
 
 /*
@@ -85,6 +86,12 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('yn-admin/event/about', AboutController::class);
     Route::resource('yn-admin/event/speaker', SpeakerController::class);
     Route::resource('yn-admin/event/media', MediaController::class);
+    Route::resource('yn-admin/event/schedule', ScheduleController::class);
+    Route::get('yn-admin/event/schedule/{id}/sessionAdd', [ScheduleController::class,'sessionAdd']);
+    Route::post('yn-admin/event/schedule/{id}/sessionCreate', [ScheduleController::class,'sessionCreate']);
+    Route::get('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionEdit/', [ScheduleController::class,'sessionEdit']);
+    Route::put('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionUpdate/', [ScheduleController::class,'sessionUpdate']);
+    Route::delete('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionDestroy/', [ScheduleController::class,'sessionDestroy']);
 });
 
 /**
