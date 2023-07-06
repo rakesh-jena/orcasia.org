@@ -22,7 +22,8 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Event\PartnerController;
 use App\Http\Controllers\Event\AboutController;
-
+use App\Http\Controllers\Event\SpeakerController;
+use App\Http\Controllers\Event\MediaController;
 
 
 /*
@@ -82,7 +83,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('yn-admin/fileUpload', FileUploadController::class);
     Route::resource('yn-admin/event/partner', PartnerController::class);
     Route::resource('yn-admin/event/about', AboutController::class);
-
+    Route::resource('yn-admin/event/speaker', SpeakerController::class);
+    Route::resource('yn-admin/event/media', MediaController::class);
 });
 
 /**
