@@ -80,7 +80,7 @@
                   </div>
                 </div>
                 <!-- Link -->
-                <a href="{{ URL::asset('pdf/ORCA-opinion-piece-2.pdf') }}" target="_blank" class="full-link">
+                <a href="https://orcasia.org/allfiles/Submission_Guidelines_–_Opinion_Piece.pdf" target="_blank" class="full-link">
                   <div class="overlay primary-25 magnetic-effect"></div>
                 </a>
               </div>
@@ -105,7 +105,7 @@
                   </div>
                 </div>
                 <!-- Link -->
-                <a href="{{ URL::asset('pdf/ORCA-issue-brief.pdf') }}" target="_blank" class="full-link">
+                <a href="https://orcasia.org/allfiles/Submission_Guidelines_–_Issue_Brief.pdf" target="_blank" class="full-link">
                   <div class="overlay primary-25 magnetic-effect"></div>
                 </a>
               </div>
@@ -130,7 +130,7 @@
                   </div>
                 </div>
                 <!-- Link -->
-                <a href="{{ URL::asset('pdf/ORCA-Submission-Guidelines-visualisations.pdf') }}" target="_blank" class="full-link">
+                <a href="https://orcasia.org/allfiles/Submission_Guidelines_–_Visualisations.pdf" target="_blank" class="full-link">
                   <div class="overlay primary-25 magnetic-effect"></div>
                 </a>
               </div>

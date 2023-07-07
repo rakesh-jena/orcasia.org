@@ -34,13 +34,13 @@
         <div class="row g-4">
             @foreach($users->sortBy('name') as $user)
                 <?php $author_meta = App\Models\UserMeta::where('user_id', $user->id)->first();?>
-                <div class="col-12 col-md-6 col-xl-4">
+                <div class="col-12 col-md-6 col-xl-4 cosmm">
                     <a href="{{url('author/'.$author_meta->slug)}}" class="item hover-zoom">
                         <div class="card boxed parent">
                             <!-- Image -->
-                            <div class="image-wrapper" data-aos="zoom-in-up">
+                            <div class="image-wrapper cosheight" data-aos="zoom-in-up">
                                 <img src="{{ URL::asset('images/author') }}/{{ $author_meta->avatar }}"
-                                    alt="Image name" class="image outline white" />
+                                    alt="Image name" class="image outline white cosobject" />
                                 <div class="image-overlay primary accent-hover"></div>
                             </div>
                             <!-- Box -->

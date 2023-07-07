@@ -5234,3 +5234,17 @@ table {
 .wp-block-heading {
     color:#000;
 }
+
+.cosmm {
+    max-height: 500px!important;
+    min-height: 500px!important;
+}
+
+.cosobject {
+    height:100%!important;
+    object-fit:cover!important;
+}
+
+.cosheight {
+    height:100%!important;
+}
