@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
 use App\Models\Event\Schedule;
 use App\Models\Event\Registeration;
 use Illuminate\Support\Facades\Session;
+use App\Mail\EventRegisteration;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterationController extends Controller
 {
@@ -40,7 +42,11 @@ class RegisterationController extends Controller
             $request['schedule_id'] = $request['schedule'];
         }
 
-        Registeration::create($request);
+        $newCreateUser = Registeration::create($request);
+        $name= $newCreateUser['fname'].' '.$newCreateUser['lname'];
+
+        // Mail::to('hiteshpawar1193@gmail.com')->send(new EventRegisteration($name));
+
         // Session::flash('success', 'Registration completed successfully!');
         return redirect('pages/events')
             ->with('success', 'Registration completed successfully!');

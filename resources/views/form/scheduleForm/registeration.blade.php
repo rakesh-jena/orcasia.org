@@ -12,51 +12,26 @@
     <div>
         <label for="fname">First Name:</label>
         <input id="fname" type="text" name="fname" required>
-
-        @error('fname')
-            <span>{{ $message }}</span>
-        @enderror
     </div>
     <div>
         <label for="lname">Last Name:</label>
         <input id="lname" type="text" name="lname" required>
-
-        @error('lname')
-            <span>{{ $message }}</span>
-        @enderror
     </div>
     <div>
         <label for="email">Email:</label>
         <input id="email" type="email" name="email" required>
-
-        @error('email')
-            <span>{{ $message }}</span>
-        @enderror
     </div>
     <div>
         <label for="phonenumber">Phone Number:</label>
         <input id="phonenumber" type="number" name="phonenumber"  required>
-
-        @error('phonenumber')
-            <span>{{ $message }}</span>
-        @enderror
     </div>
     <div>
         <label for="occupation">Occupation:</label>
         <input id="occupation" type="text" name="occupation" required>
-
-        @error('occupation')
-            <span>{{ $message }}</span>
-        @enderror
     </div>
-
     <div>
         <label for="organization">Organization:</label>
         <input id="organization" type="text" name="organization" required>
-
-        @error('organization')
-            <span>{{ $message }}</span>
-        @enderror
     </div>
     <?php $scheduleData = App\Models\Event\Schedule::orderBy('id', 'asc')->get(); 
     $counter = 0;?>
