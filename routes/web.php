@@ -25,6 +25,7 @@ use App\Http\Controllers\Event\AboutController;
 use App\Http\Controllers\Event\SpeakerController;
 use App\Http\Controllers\Event\MediaController;
 use App\Http\Controllers\Event\ScheduleController;
+use App\Http\Controllers\Event\RegisterationController;
 
 
 /*
@@ -92,6 +93,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionEdit/', [ScheduleController::class,'sessionEdit']);
     Route::put('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionUpdate/', [ScheduleController::class,'sessionUpdate']);
     Route::delete('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionDestroy/', [ScheduleController::class,'sessionDestroy']);
+    Route::resource('yn-admin/event/registeration', RegisterationController::class);
 });
 
 /**
@@ -254,7 +256,7 @@ Route::get('/pages/infographics', function () {
 // tags
 
 Route::get('tag/{slug}', 'TagController@show')->name('tag.show');
-
+Route::post('scheduleRegistration', [RegisterationController::class,'scheduleRegistration'])->name('scheduleRegistration');
 
 
 

@@ -232,6 +232,11 @@
                 </a>
                 <ul id="event-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/event')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
                     <li>
+                        <a href="{{url('yn-admin/event/registeration')}}" class="<?=(request()->is('yn-admin/event/registeration')) ? 'active' : '';?>">
+                            <i class="bi bi-circle"></i><span>Registerations Listing</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{url('yn-admin/event/schedule')}}" class="<?=(request()->is('yn-admin/event/schedule')) ? 'active' : '';?>">
                             <i class="bi bi-circle"></i><span>Schedule</span>
                         </a>
