@@ -134,8 +134,18 @@
        
         </div>
       </section>
-
-
+      <section class="shock-section pt-5 mt-2 pb-5">
+        <div class="container">
+          @if(session('success'))
+              <div class="alert alert-success">
+                  {{ session('success') }}
+              </div>
+          @endif
+          <div class="basic-intro text-center mb-5">
+            @include('form.scheduleForm.registeration')
+          </div>
+        </div>
+      </section>
 
     <!-----timeline exit -->
   </main>
