@@ -70,10 +70,10 @@
                         @foreach ($abouts as $about)
                             <tr>
                                 <!-- <th><?=$count?></th> -->
-                                <td> {{ $about->id }} </td>
-                                <td> {{ $about->title }} </td>
-                                <td> {{ $about->desc }} </td>
-                                <td>
+                                <td width="10%"> {{ $about->id }} </td>
+                                <td width="20%"> {{ $about->title }} </td>
+                                <td width="50%"> {{ $about->desc }} </td>
+                                <td width="20%">
                                     <a href="{{ url('yn-admin/event/about') }}/{{ $about->id }}/edit" class="btn btn-primary rounded-pill btn-sm">Edit</a>
                                     <button data-bs-toggle="modal" data-id="{{$about->id}}" data-aurl="{{ url('check-category') }}" data-url="{{ url('yn-admin/event/about/'.$about['id']) }}"
                                     data-bs-target="#category_delete_modal" class="btn btn-danger rounded-pill btn-sm">Delete</button>

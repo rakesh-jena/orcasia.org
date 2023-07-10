@@ -46,6 +46,7 @@
 
 <!--ABOUT-->
 <section>
+    <?php $aboutData = App\Models\Event\About::orderBy('id', 'asc')->first(); ?>
     <div id="lgx-about" class="lgx-about">
         <div class="lgx-inner">
             <div class="container">
@@ -53,26 +54,11 @@
                     <div class="col-sm-12 col-md-7">
                         <div class="lgx-about-content-area">
                             <div class="lgx-banner-info">
-                                <h2 class="title" style="color: black;">About</h2>
+                                <h2 class="title" style="color: black;">{{$aboutData['title']}}</h2>
 
                             </div>
                             <div class="lgx-about-content">
-                                <p class="text">
-                                    At the 19th National Party Congress, Party Secretary Xi Jinping announced
-                                    the beginning of a “new era” which was to be driven by “socialism with
-                                    Chinese characteristics”. The 20th National Party Congress has seen that
-                                    mandate renewed amidst Xi’s international, regional and domestic ambitions
-                                    growing to build China into a global superpower –and the CPC into a global
-                                    ‘super-party’. Countries across the world have begun to view this ambition
-                                    with alarm, especially as China inches closer to creating an alternative
-                                    global order that is pax-Sinica driven, replacing pax-Americana. With China
-                                    attempting to facilitate a transition from great power to superpower in an
-                                    increasingly multipolar world, signs of this ambitious transition are
-                                    visible in China’s domestic and international posturing. To glean how China
-                                    is preparing for the “new era”, this conference will bring together the
-                                    finest minds in Sinology to analyze the trajectory of China’s rise and its
-                                    path to superpower status.
-                                </p>
+                                {!! $aboutData['content'] !!}
                                 <div class="about-date-area">
                                     <h4 class="date"><span>25-26</span></h4>
                                     <p><span>September 2023</span> The Grand, New Delhi</p>
@@ -112,307 +98,71 @@
                         </div>
                     </div>
                 </div>
+                <?php $scheduleData = App\Models\Event\Schedule::orderBy('id', 'asc')->get(); ?>
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="lgx-tab lgx-tab-vertical">
                             <ul class="nav nav-pills lgx-nav lgx-nav-nogap lgx-nav-colorful">
-                                <li class="active"><a data-toggle="pill" href="#home">
-                                        <h3>First <span>Day</span></h3>
-                                        <p><span>29 </span>Nov, 2019</p>
-                                    </a></li>
-                                <li><a data-toggle="pill" href="#menu1">
-                                        <h3>Second <span>Day</span></h3>
-                                        <p><span>28 </span>Jul, 2019</p>
-                                    </a></li>
-                                
+                            <?php $counter = 0; ?>
+                            @foreach($scheduleData as $schedule)
+                                <li class="{{$counter == 0 ? 'active' : ''}}">
+                                <?php $slug  = strtolower(str_replace(' ', '-', $schedule['title'])); ?>
+                                    <a data-toggle="pill" href="{{$slug}}">
+                                    <h3>{{$schedule->title}}</h3>
+                                    <p><?=date_format(date_create($schedule->scheduleDate), "j M, Y")?></p>
+                                    </a>
+                                </li>
+                                <?php $counter++; ?>
+                            @endforeach
                             </ul>
                             <div class="tab-content lgx-tab-content">
+                            <?php $accCounter = 0; ?>
+                            @foreach($scheduleData as $schedule)
+                            <?php $slug  = strtolower(str_replace(' ', '-', $schedule['title'])); ?>
+                                <div id="{{$slug}}" class="tab-pane fade {{$accCounter == 0 ? 'in active' : ''}}">
 
-
-                                <div id="home" class="tab-pane fade in active">
-
-                                    <div class="panel-group" id="accordion" role="tablist"
-                                        aria-multiselectable="true">
+                                    <div class="panel-group" id="<?php echo 'accordion'.$accCounter; ?>" role="tablist" aria-multiselectable="true">
+                                    
+                                    <?php $sessionData = App\Models\Event\ScheduleSession::orderBy('id', 'asc')->where('scheduleId',$schedule['id'])->get(); ?>
+                                    <?php $sessionCounter = 0; ?>
+                                    @foreach($sessionData as $session)
                                         <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingOne">
+                                            <div class="panel-heading" role="tab" id="<?php echo 'heading'.$accCounter.$sessionCounter; ?>">
                                                 <div class="panel-title">
                                                     <a role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">
+                                                        data-parent="<?php echo '#accordion'.$accCounter; ?>" href="<?php echo '#collapse'.$accCounter.$sessionCounter; ?>"
+                                                        aria-expanded="true" aria-controls="<?php echo 'collapse'.$accCounter.$sessionCounter; ?>">
                                                         <div class="lgx-single-schedule">
-                                                            
+                                                            <?php 
+                                                            $convertedStartTime = DateTime::createFromFormat('H:i:s', $session->startTime)->format('h:i A');
+
+                                                            $convertedEndTime = DateTime::createFromFormat('H:i:s', $session->endTime)->format('h:i A');
+                                                            ?>
                                                             <div class="schedule-info">
-                                                                <h4 class="time">09:00 <span>Am</span> - 10.30
-                                                                    <span>Am</span></h4>
-                                                                <h3 class="title">Wait is Over! Stony Brook
-                                                                    Captures Conference</h3>
+                                                                <h4 class="time">{{$convertedStartTime}} - {{$convertedEndTime}}</h4>
+                                                                <h3 class="title">{{$session->title}}</h3>
                                                                 
                                                             </div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div id="collapseOne" class="panel-collapse collapse in"
-                                                role="tabpanel" aria-labelledby="headingOne">
+                                            <div id="<?php echo 'collapse'.$accCounter.$sessionCounter; ?>" class="panel-collapse collapse in"
+                                                role="tabpanel" aria-labelledby="<?php echo 'heading'.$accCounter.$sessionCounter; ?>">
                                                 <div class="panel-body">
                                                     <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
+                                                        {{$session->description}}
                                                     </p>
                                                     
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingTwo">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapseTwo"
-                                                        aria-expanded="true" aria-controls="collapseTwo">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">10:30 <span>Am</span> - 11.30
-                                                                    <span>Am</span></h4>
-                                                                <h3 class="title">Team With At Least Three
-                                                                    Conference Titles</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingThree">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapseThree"
-                                                        aria-expanded="true" aria-controls="collapseThree">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">11:30 <span>Am</span> - 01.30
-                                                                    <span>Pm</span></h4>
-                                                                <h3 class="title">Building an Awesome Community
-                                                                    on Your Website</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapseThree" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingfour">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapsefour"
-                                                        aria-expanded="true" aria-controls="collapsefour">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">02:00 <span>Am</span> - 03.30
-                                                                    <span>Pm</span></h4>
-                                                                <h3 class="title">Hungry Shawnee boys soccer
-                                                                    team eyeing conference, sectional title in
-                                                                    2019</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapsefour" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingfive">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion" href="#collapsefive"
-                                                        aria-expanded="true" aria-controls="collapsefive">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">03:45 <span>Am</span> - 04.00
-                                                                    <span>Pm</span></h4>
-                                                                <h3 class="title">Business World Event
-                                                                    Introduction</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapsefive" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <?php $sessionCounter++; ?>
+                                    @endforeach
                                     </div>
-
                                 </div>
-
-
-                                <div id="menu1" class="tab-pane fade">
-
-                                    <div class="panel-group" id="accordion2" role="tablist"
-                                        aria-multiselectable="true">
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingOne2">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion2" href="#collapseOne2"
-                                                        aria-expanded="true" aria-controls="collapseOne2">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">09:00 <span>Am</span> - 10.30
-                                                                    <span>Am</span></h4>
-                                                                <h3 class="title">The Wait is Over! Stony Brook
-                                                                    Captures First Conference Title</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapseOne2" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingTwo2">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion2" href="#collapseTwo2"
-                                                        aria-expanded="true" aria-controls="collapseTwo2">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">09:00 <span>Am</span> - 10.30
-                                                                    <span>Am</span></h4>
-                                                                <h3 class="title">Digital World Event
-                                                                    Introduction</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapseTwo2" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default lgx-panel">
-                                            <div class="panel-heading" role="tab" id="headingThree2">
-                                                <div class="panel-title">
-                                                    <a class="collapsed" role="button" data-toggle="collapse"
-                                                        data-parent="#accordion2" href="#collapseThree2"
-                                                        aria-expanded="true" aria-controls="collapseThree2">
-                                                        <div class="lgx-single-schedule">
-                                                            
-                                                            <div class="schedule-info">
-                                                                <h4 class="time">09:00 <span>Am</span> - 10.30
-                                                                    <span>Am</span></h4>
-                                                                <h3 class="title">Digital World Event
-                                                                    Introduction</h3>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div id="collapseThree2" class="panel-collapse collapse"
-                                                role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <p class="text">
-                                                        Meh synth Schlitz, tempor duis single-origin coffee ea
-                                                        next level ethnic fingerstache fanny pack nostrud. Photo
-                                                        booth anim 8-bit hella, PBR 3 wolf moon beard Helvetica.
-                                                        Salvia esse flexitarian Truffaut synth art party deep v
-                                                        chillwave.
-                                                    </p>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-
-                                
+                                <?php $accCounter++; ?>
+                            @endforeach                               
                             </div>
                         </div>
                     </div>
