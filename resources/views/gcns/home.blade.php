@@ -1,6 +1,7 @@
 @extends('gcns.main')
 
 @section('content')
+ <!-- @include('form.scheduleForm.registeration') -->
 <!--BANNER-->
 <section>
     <div class="lgx-banner">
