@@ -258,5 +258,15 @@ Route::get('/pages/infographics', function () {
 Route::get('tag/{slug}', 'TagController@show')->name('tag.show');
 Route::post('scheduleRegistration', [RegisterationController::class,'scheduleRegistration'])->name('scheduleRegistration');
 
+Route::get('/pages/gcns', function () {
+    return view('gcns/home');
+});
 
+// Route::domain('gcns.orcasia.org')->group(function () {
+//     // Routes for example.com domain
+//     Route::get('/', function () {
+//         return 'Welcome to example.com';
+//     });
 
+//     // Other routes for example.com
+// });
