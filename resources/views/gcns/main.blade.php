@@ -191,62 +191,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Modal-->
-                        <div id="lgx-modal-map" class="modal fade lgx-modal">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal"
-                                            aria-hidden="true">×</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        
-                                            <div class="lgx-registration-form-box">
-                                                <h3 class="title">Registration</h3>
-                                                <div class="lgx-registration-form">
-                                                    <input name="text" value="" class="wpcf7-form-control form-control" placeholder="First Name" type="text">
-                                                    <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Last Name" type="text">
-                                                    <input name="email" value="" class="wpcf7-form-control form-control" placeholder="Your E-mail ..." type="email">
-                                                    <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Mobile Number ..." type="text">
-                                                    <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Occupation" type="text">
-                                                    <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Current Organisation" type="text">
-                                                   
-                                                    <br>
-                                                    <p style="color: white;">Registering for which days</p>
-                                                    <br>
-                                                    <div class="dspflex">
-                                                    
-                                                        <div class="radiobtn mr">
-                                                            <input type="radio" id="day1"
-                                                                        name="drone" value="day1" checked />
-                                                            <label for="day1">Day One</label>
-                                                        </div>
-                                                    
-                                                        <div class="radiobtn mr">
-                                                            <input type="radio" id="day2"
-                                                                        name="drone" value="day2" />
-                                                            <label for="day2">Day Two</label>
-                                                        </div>
-                                                    
-                                                        <div class="radiobtn">
-                                                            <input type="radio" id="both"
-                                                                        name="drone" value="both" />
-                                                            <label for="both">Both</label>
-                                                        </div>
-                                                    </div>
-                                                    <!--
-                                                    <div class="g-recaptcha dspflex" data-sitekey="6LcaDOEcAAAAAMMMjj-8-BQorfN6X5DJIScfRuFz"></div>
-                                                   -->
-                                                    <input value="Registration Now" class="wpcf7-form-control wpcf7-submit lgx-submit" type="submit">
-                                                       
-                                                </div>
-                                            </div>
-                                     
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- //.Modal-->
-
+                        @include('gcns.form.registeration')
                         <div class="lgx-footer-bottom">
                             <div class="lgx-copyright">
                                 <p> <span>©</span> 2023 ORCA | Designed by<a
