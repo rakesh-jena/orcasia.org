@@ -133,21 +133,6 @@
   transform: scale(1);
 }
 
-.img-1{
-  background-image: url(https://images.pexels.com/photos/2521619/pexels-photo-2521619.jpeg?cs=srgb&dl=pexels-troy-squillaci-2521619.jpg&fm=jpg);
-}
-.img-2{
-  background-image: url(https://images.pexels.com/photos/9470498/pexels-photo-9470498.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9470498.jpg&fm=jpg);
-}
-.img-3{
-  background-image: url(https://images.pexels.com/photos/4366062/pexels-photo-4366062.jpeg?cs=srgb&dl=pexels-antonio-cuellar-4366062.jpg&fm=jpg);
-}
-.img-4{
-  background-image: url(https://images.pexels.com/photos/9482128/pexels-photo-9482128.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9482128.jpg&fm=jpg);
-}
-.img-5{
-  background-image: url(https://images.pexels.com/photos/10267705/pexels-photo-10267705.jpeg?cs=srgb&dl=pexels-humberto-baddini-10267705.jpg&fm=jpg);
-}
 
 .slidername {
     color:#fff!important;

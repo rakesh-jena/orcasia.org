@@ -183,8 +183,6 @@
 <!--SCHEDULE END-->
 
 
-
-
 <!--SPEAKERS-->
 <section>
     <div id="lgx-speakers" class="lgx-speakers lgx-speakers2">
@@ -201,74 +199,78 @@
                 <!--//.ROW-->
                 <div class="row">
                     <div class="my-slider">
-            <div>
-              <div class="slide slidemr">
-                <div class="slide-img img-1">
-                  <a href="#">Learn More</a>
+                        <div>
+                            <div class="slide slidemr">
+                                <div class="slide-img">
+                                    <img src="https://images.pexels.com/photos/2521619/pexels-photo-2521619.jpeg?cs=srgb&dl=pexels-troy-squillaci-2521619.jpg&fm=jpg" alt="Image 1">
+                                    <a href="#">Learn More</a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3 class="slidername">Hawaii</h3>
+                                    <p class="slidername">Maui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide slidemr">
+                                <div class="slide-img">
+                                    <img src="https://images.pexels.com/photos/9470498/pexels-photo-9470498.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9470498.jpg&fm=jpg" alt="Image 2">
+                                    <a href="#">Read More</a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3 class="slidername">Hawaii</h3>
+                                    <p class="slidername">Maui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide slidemr">
+                                <div class="slide-img">
+                                    <img src="https://images.pexels.com/photos/4366062/pexels-photo-4366062.jpeg?cs=srgb&dl=pexels-antonio-cuellar-4366062.jpg&fm=jpg" alt="Image 3">
+                                    <a href="#">Learn More</a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3 class="slidername">Hawaii</h3>
+                                    <p class="slidername">Maui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide slidemr">
+                                <div class="slide-img">
+                                    <img src="https://images.pexels.com/photos/9482128/pexels-photo-9482128.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9482128.jpg&fm=jpg" alt="Image 4">
+                                    <a href="#">Learn More</a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3 class="slidername">Hawaii</h3>
+                                    <p class="slidername">Maui</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide slidemr">
+                                <div class="slide-img">
+                                    <img src="https://images.pexels.com/photos/10267705/pexels-photo-10267705.jpeg?cs=srgb&dl=pexels-humberto-baddini-10267705.jpg&fm=jpg" alt="Image 5">
+                                    <a href="#">Learn More</a>
+                                </div>
+                                <br>
+                                <div>
+                                    <h3 class="slidername">Hawaii</h3>
+                                    <p class="slidername">Maui</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//.my-slider-->
                 </div>
-                <br>
-                <div>
-                  <h3 class="slidername">Hawaii</h3>
-                  <p class="slidername">Maui</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide slidemr">
-                <div class="slide-img img-2">
-                  <a href="#">Read More</a>
-                </div>
-                <br>
-                <div>
-                  <h3 class="slidername">Hawaii</h3>
-                  <p class="slidername">Maui</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide slidemr">
-                <div class="slide-img img-3">
-                  <a href="#">Learn More</a>
-                </div>
-                <br>
-                <div>
-                  <h3 class="slidername">Hawaii</h3>
-                  <p class="slidername">Maui</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide slidemr">
-                <div class="slide-img img-4">
-                  <a href="#">Learn More</a>
-                </div>
-                <br>
-                <div>
-                  <h3 class="slidername">Hawaii</h3>
-                  <p class="slidername">Maui</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide slidemr">
-                <div class="slide-img img-5">
-                  <a href="#">Learn More</a>
-                </div>
-                <br>
-                <div>
-                  <h3 class="slidername">Hawaii</h3>
-                  <p class="slidername">Maui</p>
-                </div>
-              </div>
-            </div>
-          </div>
-           <!--//.ROW-->
+                <!--//.ROW-->
                 <div class="section-btn-area schedule-btn-area">
-                   
                     <a class="lgx-btn lgx-btn-red lgx-btn-big" href="#"><span>View all Speakers</span></a>
                 </div>
-                </div>
-            
             </div>
             <!-- //.CONTAINER -->
         </div>
