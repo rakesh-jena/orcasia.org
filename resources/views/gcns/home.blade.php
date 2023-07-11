@@ -187,6 +187,7 @@
 
 <!--SPEAKERS-->
 <section>
+<?php $speakerData = App\Models\Event\Speaker::orderBy('id', 'asc')->get(); ?>
     <div id="lgx-speakers" class="lgx-speakers lgx-speakers2">
         <div class="lgx-inner">
             <div class="container">
@@ -201,71 +202,21 @@
                 <!--//.ROW-->
                 <div class="row">
                     <div class="my-slider">
+                    @foreach($speakerData as $speaker)
                         <div>
                             <div class="slide slidemr">
                                 <div class="slide-img">
-                                    <img src="https://images.pexels.com/photos/2521619/pexels-photo-2521619.jpeg?cs=srgb&dl=pexels-troy-squillaci-2521619.jpg&fm=jpg" alt="Image 1">
+                                    <img src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}">
                                     <a href="#">Learn More</a>
                                 </div>
                                 <br>
                                 <div>
-                                    <h3 class="slidername">Hawaii</h3>
-                                    <p class="slidername">Maui</p>
+                                    <h3 class="slidername">{{$speaker->name}}</h3>
+                                    <p class="slidername">{{$speaker->designation}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="slide slidemr">
-                                <div class="slide-img">
-                                    <img src="https://images.pexels.com/photos/9470498/pexels-photo-9470498.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9470498.jpg&fm=jpg" alt="Image 2">
-                                    <a href="#">Read More</a>
-                                </div>
-                                <br>
-                                <div>
-                                    <h3 class="slidername">Hawaii</h3>
-                                    <p class="slidername">Maui</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="slide slidemr">
-                                <div class="slide-img">
-                                    <img src="https://images.pexels.com/photos/4366062/pexels-photo-4366062.jpeg?cs=srgb&dl=pexels-antonio-cuellar-4366062.jpg&fm=jpg" alt="Image 3">
-                                    <a href="#">Learn More</a>
-                                </div>
-                                <br>
-                                <div>
-                                    <h3 class="slidername">Hawaii</h3>
-                                    <p class="slidername">Maui</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="slide slidemr">
-                                <div class="slide-img">
-                                    <img src="https://images.pexels.com/photos/9482128/pexels-photo-9482128.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9482128.jpg&fm=jpg" alt="Image 4">
-                                    <a href="#">Learn More</a>
-                                </div>
-                                <br>
-                                <div>
-                                    <h3 class="slidername">Hawaii</h3>
-                                    <p class="slidername">Maui</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="slide slidemr">
-                                <div class="slide-img">
-                                    <img src="https://images.pexels.com/photos/10267705/pexels-photo-10267705.jpeg?cs=srgb&dl=pexels-humberto-baddini-10267705.jpg&fm=jpg" alt="Image 5">
-                                    <a href="#">Learn More</a>
-                                </div>
-                                <br>
-                                <div>
-                                    <h3 class="slidername">Hawaii</h3>
-                                    <p class="slidername">Maui</p>
-                                </div>
-                            </div>
-                        </div>
+                    @endforeach
                     </div>
                     <!--//.my-slider-->
                 </div>
@@ -317,6 +268,7 @@ let slider = tns({
 
     <!--Sponsors-->
 <section>
+<?php $partnerData = App\Models\Event\Partner::orderBy('id', 'asc')->get(); ?>
     <div id="lgx-partners" class="lgx-news">
         <div class="lgx-inner">
             <div class="container">
@@ -329,45 +281,23 @@ let slider = tns({
                     </div>
                 </div>
                 <div class="row">
+                    @foreach($partnerData as $partner)
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-news">
                             <figure>
-                                <a href="news-single.html"><img src="http://placehold.it/1144x690" alt=""></a>
+                                <a href="news-single.html">
+                                <img src="{{url('images/event/partner/'.$partner->logo)}}" alt="{{$partner->title}}">
+                                </a>
                             </figure>
                             <div class="single-news-info">
                             
-                                <h3 class="title"><a href="news-single.html">Title</a></h3>
-                                <p>Conferences dedicated to building remarkable events.</p>
+                                <h3 class="title"><a href="news-single.html">{{$partner->title}}</a></h3>
+                                <p>{{$partner->content}}</p>
                                 <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="#"><span>Know More</span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-news">
-                            <figure>
-                                <a href="news-single.html"><img src="http://placehold.it/1144x690" alt=""></a>
-                            </figure>
-                            <div class="single-news-info">
-                            
-                                <h3 class="title"><a href="news-single.html">Title</a></h3>
-                                <p>Conferences dedicated to building remarkable events.</p>
-                                <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="#"><span>Know More</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-news">
-                            <figure>
-                                <a href="news-single.html"><img src="http://placehold.it/1144x690" alt=""></a>
-                            </figure>
-                            <div class="single-news-info">
-                            
-                                <h3 class="title"><a href="news-single.html">Title</a></h3>
-                                <p>Conferences dedicated to building remarkable events.</p>
-                                <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="#"><span>Know More</span></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 
             </div><!-- //.CONTAINER -->

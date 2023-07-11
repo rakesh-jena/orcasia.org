@@ -44,6 +44,12 @@ use App\Http\Controllers\Event\RegisterationController;
  * ADMIN DASHBOARD URLs
  * ------------------------------------------------------------------------
  * */
+Route::domain('gcns.orcasia.org')->group(function () {
+    Route::get('/', function () {
+        return view('gcns.home');
+    });
+});
+
 Route::middleware(['auth', 'admin'])->group(function () {
     /**Dashboard */
     Route::get('yn-admin', [DashboardController::class, 'index']);
@@ -262,11 +268,4 @@ Route::get('/pages/gcns', function () {
     return view('gcns/home');
 });
 
-// Route::domain('gcns.orcasia.org')->group(function () {
-//     // Routes for example.com domain
-//     Route::get('/', function () {
-//         return 'Welcome to example.com';
-//     });
 
-//     // Other routes for example.com
-// });
