@@ -7492,7 +7492,7 @@ button:hover:after {
     }
 
     .lgx-header-position {
-        background: #1b273d
+        background: #fff;
     }
 
     .lgx-header-position-fixed {
@@ -7507,7 +7507,7 @@ button:hover:after {
 
     .lgx-header .lgx-nav-right .lgx-search,
     .lgx-header .lgx-navbar .lgx-nav li a {
-        color: #fff
+       
     }
 
     .lgx-navbar .lgx-nav li a.lgx-btn {
@@ -7612,7 +7612,7 @@ button:hover:after {
 
 .lgx-banner {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/AdobeStock_148440999.jpg) top center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/gcnsbg.png) top center no-repeat;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
@@ -9264,11 +9264,13 @@ button:hover:after {
 }
 
 .lgx-speakers2 {
-    background: url(../img/AdobeStock_369027912.jpg) bottom left no-repeat fixed;
-    -webkit-background-size: auto auto, cover;
+    background-image: url('../img/speakersbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+    -webkit-background-size: cover;
     -o-background-size: auto auto, cover;
     -moz-background-size: auto auto, cover;
-    background-size: auto auto, cover
+  
 }
 
 .lgx-speakers2 .lgx-inner {
@@ -9959,7 +9961,7 @@ button:hover:after {
 }
 
 .lgx-tab .nav-pills .active a h3 {
-    color: #efa506
+    color: #fff
 }
 
 .lgx-tab2 .lgx-nav,
@@ -10189,7 +10191,8 @@ button:hover:after {
 }
 
 .lgx-panel .panel-body .text {
-    margin-bottom: 1.6rem
+    margin-bottom: 1.6rem;
+    padding: 0rem 3rem 0rem 0rem;
 }
 
 .lgx-panel .panel-body .location {
@@ -14120,4 +14123,12 @@ blockquote.lgx-testi-single:before {
     100% {
         background-color: #554bb9;
    }
+}
+
+.textjustify {
+    text-align:justify;
+}
+
+.navbar-toggle {
+    background-color:#000!important;
 }

@@ -37,23 +37,23 @@
     <!-- facebook open graph ends from here -->
 
     <!--  FAVICON AND TOUCH ICONS -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('gcns/img/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('gcns/img/gcnslogo.png') }}" />
     <!-- this icon shows in browser toolbar -->
-    <link rel="icon" type="image/x-icon" href="{{ URL::asset('gcns/img/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ URL::asset('gcns/img/gcnslogo.png') }}" />
     <!-- this icon shows in browser toolbar -->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gcns/img/favicon/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('gcns/img/favicon/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('gcns/img/favicon/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('gcns/img/favicon/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('gcns/img/favicon/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('gcns/img/favicon/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('gcns/img/favicon/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('gcns/img/favicon/apple-icon-152x152.png') }}.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('gcns/img/favicon/apple-icon-180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ URL::asset('gcns/img/favicon/android-icon-192x192.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('gcns/img/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('gcns/img/favicon/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gcns/img/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('gcns/img/gcnslogo.png') }}">
     <link rel="manifest" href="{{ URL::asset('gcns/img/favicon/manifest.json') }}">
 
     <!-- BOOTSTRAP CSS -->
@@ -78,17 +78,86 @@
 
     <!-- MASTER  STYLESHEET  -->
     <link id="lgx-master-style" rel="stylesheet" href="{{ URL::asset('gcns/css/style-default.min.css') }}" media="all" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
 
     <!-- MODERNIZER CSS  -->
     <script src="{{ URL::asset('gcns/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 
     <!----re captcha -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
+     
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </head>
 
 <style>
     .white-logo {
     filter: brightness(0) invert(1);
+}
+
+#slider{
+  height: 500px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-img{
+  width: 100%;
+  height: 275px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.slide-img:hover{
+  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+}
+
+.slide-img a{
+  opacity: 0;
+  text-decoration: none;
+  transform: scale(0);
+  transition: 0.8s;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.slide-img:hover a{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.img-1{
+  background-image: url(https://images.pexels.com/photos/2521619/pexels-photo-2521619.jpeg?cs=srgb&dl=pexels-troy-squillaci-2521619.jpg&fm=jpg);
+}
+.img-2{
+  background-image: url(https://images.pexels.com/photos/9470498/pexels-photo-9470498.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9470498.jpg&fm=jpg);
+}
+.img-3{
+  background-image: url(https://images.pexels.com/photos/4366062/pexels-photo-4366062.jpeg?cs=srgb&dl=pexels-antonio-cuellar-4366062.jpg&fm=jpg);
+}
+.img-4{
+  background-image: url(https://images.pexels.com/photos/9482128/pexels-photo-9482128.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-9482128.jpg&fm=jpg);
+}
+.img-5{
+  background-image: url(https://images.pexels.com/photos/10267705/pexels-photo-10267705.jpeg?cs=srgb&dl=pexels-humberto-baddini-10267705.jpg&fm=jpg);
+}
+
+.slidername {
+    color:#fff!important;
+    margin-top:-5px!important;
+    margin-bottom:1px!important;
+    text-align:center!important;
+}
+
+.slidemr {
+    margin: 2rem!important;
 }
 </style>
 
@@ -119,10 +188,10 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <div class="lgx-logo">
-                                    <a href="index.html" class="lgx-scroll">
+                                    <a href="/pages/gcns" class="lgx-scroll">
                                         <img id="logo-img" src="{{ URL::asset('gcns/img/gcnslogo.png') }}" alt="GCNS LOGO" />
                                     </a>
-                                    <a href="index.html" class="lgx-scroll">
+                                    <a href="http://orcasia.org" class="lgx-scroll">
                                         <img id="logo-imgtwo" src="{{ URL::asset('gcns/img/orcalogo.png') }}" alt="ORCA LOGO" />
                                     </a>
                                 </div>
@@ -139,9 +208,9 @@
                                     <li><a class="lgx-scroll" href="#lgx-schedule">Schedule</a></li>
                                     <li><a class="lgx-scroll" href="#lgx-speakers">Speaker</a></li>
                                     
-                                    <li><a class="lgx-scroll" href="#lgx-sponsors">Sponsors</a></li>
+                                    <li><a class="lgx-scroll" href="#lgx-partners">Partners</a></li>
                                 
-                                    <li><a class="lgx-scroll" href="#">Contact</a></li>
+                                    <li><a class="lgx-scroll" href="#lgx-contact">Contact</a></li>
                                 </ul>
                             </div><!--/.nav-collapse -->
                         </nav>
@@ -157,20 +226,20 @@
 
         <!--FOOTER-->
         <footer>
-            <div id="lgx-footer" class="lgx-footer lgx-footer-black"> <!--lgx-footer-white-->
+            <div id="lgx-contact" class="lgx-footer lgx-footer-black"> <!--lgx-footer-white-->
                 <div class="lgx-inner-footer">
                    
                     <div class="container">
                         <div class="lgx-footer-area lgx-footer-area-center">
                             <div class="lgx-footer-single">
-                                <h3 class="footer-title">Social Connection</h3>
+                                <h3 class="footer-title">Follow Us</h3>
                                 <p class="text">
-                                    You should connect social area <br> for Any update
+                                    
                                 </p>
                                 <ul class="list-inline lgx-social-footer">
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/company/orca-s-global-conference-on-new-sinology/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://twitter.com/GCNS_ORCA"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                   
                                    
                                 </ul>
                             </div>
@@ -182,12 +251,13 @@
                                 <address>
                                     The Grand<br>Nelson Mandela Marg, Pocket 4,<br>Vasant Kunj II, Vasant Kunj, New Delhi,<br>Delhi 110070
                                 </address>
-                                <a class="map-link"
-                                    href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> View Map location</a>
+                                <a class="map-link" target="_blank"
+                                    href="https://goo.gl/maps/WZdHG8wuzJCWMgCY7"><i class="fa fa-map-marker" aria-hidden="true"></i> View Map location</a>
                             </div>
                             <div class="lgx-footer-single">
-                                <h2 class="footer-title">Twitter Feed</h2>
+                                <h2 class="footer-title"><a href="https://twitter.com/GCNS_ORCA?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @GCNS_ORCA</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></h2>
                                 <div id="instafeed">
+                                    
                                 </div>
                             </div>
                         </div>

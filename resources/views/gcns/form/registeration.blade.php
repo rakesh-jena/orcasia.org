@@ -88,7 +88,7 @@
                             <!--
                             <div class="g-recaptcha dspflex" data-sitekey="6LcaDOEcAAAAAMMMjj-8-BQorfN6X5DJIScfRuFz"></div>
                             -->
-                            <input value="Registration Now" class="wpcf7-form-control wpcf7-submit lgx-submit" type="submit">
+                            <input value="Register Now" class="wpcf7-form-control wpcf7-submit lgx-submit" type="submit">
                                 
                         </div>
                     </div>

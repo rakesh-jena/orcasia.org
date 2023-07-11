@@ -57,8 +57,8 @@
                                 <h2 class="title" style="color: black;">{{$aboutData['title']}}</h2>
 
                             </div>
-                            <div class="lgx-about-content">
-                                {!! $aboutData['content'] !!}
+                            <div class="lgx-about-content textjustify">
+                                {!! $aboutData['desc'] !!}
                                 <div class="about-date-area">
                                     <h4 class="date"><span>25-26</span></h4>
                                     <p><span>September 2023</span> The Grand, New Delhi</p>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="col-sm-12 col-md-5">
                         <div class="lgx-about-img-sp">
-                            <img src="http://placehold.it/556x712" alt="about">
+                            <img src="{{ URL::asset('gcns/img/gcnslogo556.png') }}" alt="about">
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                     <div class="col-xs-12">
                         <div class="lgx-banner-info">
                             <h2 class="textalign title" style="color: black;">Schedule</h2>
-                            <p class="textalign mb3">Welcome to the dedicated to building remarkable Schedule!
+                            <p class="textalign mb3">Peruse through the schedule of ORCA's inaugural Global Conference on New Sinology (GCNS)
                             </p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                             @foreach($scheduleData as $schedule)
                                 <li class="{{$counter == 0 ? 'active' : ''}}">
                                 <?php $slug  = strtolower(str_replace(' ', '-', $schedule['title'])); ?>
-                                    <a data-toggle="pill" href="{{$slug}}">
+                                    <a data-toggle="pill" href="#{{$slug}}">
                                     <h3>{{$schedule->title}}</h3>
                                     <p><?=date_format(date_create($schedule->scheduleDate), "j M, Y")?></p>
                                     </a>
@@ -140,7 +140,7 @@
                                                             ?>
                                                             <div class="schedule-info">
                                                                 <h4 class="time">{{$convertedStartTime}} - {{$convertedEndTime}}</h4>
-                                                                <h3 class="title">{{$session->title}}</h3>
+                                                                <h3 class="title textjustify">{{$session->title}}</h3>
                                                                 
                                                             </div>
                                                         </div>
@@ -150,7 +150,7 @@
                                             <div id="<?php echo 'collapse'.$accCounter.$sessionCounter; ?>" class="panel-collapse collapse in"
                                                 role="tabpanel" aria-labelledby="<?php echo 'heading'.$accCounter.$sessionCounter; ?>">
                                                 <div class="panel-body">
-                                                    <p class="text">
+                                                    <p class="text textjustify">
                                                         {{$session->description}}
                                                     </p>
                                                     
@@ -170,8 +170,8 @@
                 <!--//.ROW-->
                 <div class="section-btn-area schedule-btn-area">
                     <a class="lgx-btn lgx-btn-big" href="speakers.html"><span>Download Schedule (PDF)</span></a>
-                    <a class="lgx-btn lgx-btn-red lgx-btn-big" href="speakers.html"><span>Connect via
-                            facebook</span></a>
+                    <a class="lgx-btn lgx-btn-red lgx-btn-big" href="https://twitter.com/GCNS_ORCA"><span>Connect via
+                            Twitter</span></a>
                 </div>
             </div>
             <!-- //.CONTAINER -->
@@ -180,6 +180,8 @@
     </div>
 </section>
 <!--SCHEDULE END-->
+
+
 
 
 <!--SPEAKERS-->
@@ -191,96 +193,79 @@
                     <div class="col-xs-12">
                         <div class="lgx-heading lgx-heading-white">
                             <h2 class="heading">Who’s Speaking</h2>
-                            <h3 class="subheading">Welcome to the dedicated to building remarkable Speakers!</h3>
+                            <h3 class="subheading">Our speakers for ORCA's Global Conference on New Sinology 2023</h3>
                         </div>
                     </div>
                 </div>
                 <!--//.ROW-->
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-speaker"> <!--lgx-single-speaker-circle lgx-single-speaker2 lgx-single-speaker3-->
-                            <figure>
-                                <a class="profile-img" href="speakers.html"><img src="http://placehold.it/800x860" alt="Speaker"/></a>
-                                <figcaption>
-                                
-                                    <div class="speaker-info">
-                                        <h3 class="title"><a href="speaker.html">Jonathon Doe</a></h3>
-                                        <h4 class="subtitle">Ceo of LogicHunt</h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-speaker"> <!--lgx-single-speaker-circle lgx-single-speaker2 lgx-single-speaker3-->
-                            <figure>
-                                <a class="profile-img" href="speakers.html"><img src="http://placehold.it/800x860" alt="Speaker"/></a>
-                                <figcaption>
-                                    
-                                    <div class="speaker-info">
-                                        <h3 class="title"><a href="speaker.html">Jonathon Doe</a></h3>
-                                        <h4 class="subtitle">Ceo of LogicHunt</h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-speaker"> <!--lgx-single-speaker-circle lgx-single-speaker2 lgx-single-speaker3-->
-                            <figure>
-                                <a class="profile-img" href="speakers.html"><img src="http://placehold.it/800x860" alt="Speaker"/></a>
-                                <figcaption>
-                                    
-                                    <div class="speaker-info">
-                                        <h3 class="title"><a href="speaker.html">Jonathon Doe</a></h3>
-                                        <h4 class="subtitle">Ceo of LogicHunt</h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-speaker"> <!--lgx-single-speaker-circle lgx-single-speaker2 lgx-single-speaker3-->
-                            <figure>
-                                <a class="profile-img" href="speakers.html"><img src="http://placehold.it/800x860" alt="Speaker"/></a>
-                                <figcaption>
-                                    
-                                    <div class="speaker-info">
-                                        <h3 class="title"><a href="speaker.html">Jonathon Doe</a></h3>
-                                        <h4 class="subtitle">Ceo of LogicHunt</h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-speaker"> <!--lgx-single-speaker-circle lgx-single-speaker2 lgx-single-speaker3-->
-                            <figure>
-                                <a class="profile-img" href="speakers.html"><img src="http://placehold.it/800x860" alt="Speaker"/></a>
-                                <figcaption>
-                                    
-                                    <div class="speaker-info">
-                                        <h3 class="title"><a href="speaker.html">Jonathon Doe</a></h3>
-                                        <h4 class="subtitle">Ceo of LogicHunt</h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="lgx-single-speaker"> <!--lgx-single-speaker-circle lgx-single-speaker2 lgx-single-speaker3-->
-                            <figure>
-                                <a class="profile-img" href="speakers.html"><img src="http://placehold.it/800x860" alt="Speaker"/></a>
-                                <figcaption>
-                                    
-                                    <div class="speaker-info">
-                                        <h3 class="title"><a href="speaker.html">Jonathon Doe</a></h3>
-                                        <h4 class="subtitle">Ceo of LogicHunt</h4>
-                                    </div>
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
+                    <div class="my-slider">
+            <div>
+              <div class="slide slidemr">
+                <div class="slide-img img-1">
+                  <a href="#">Learn More</a>
+                </div>
+                <br>
+                <div>
+                  <h3 class="slidername">Hawaii</h3>
+                  <p class="slidername">Maui</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide slidemr">
+                <div class="slide-img img-2">
+                  <a href="#">Read More</a>
+                </div>
+                <br>
+                <div>
+                  <h3 class="slidername">Hawaii</h3>
+                  <p class="slidername">Maui</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide slidemr">
+                <div class="slide-img img-3">
+                  <a href="#">Learn More</a>
+                </div>
+                <br>
+                <div>
+                  <h3 class="slidername">Hawaii</h3>
+                  <p class="slidername">Maui</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide slidemr">
+                <div class="slide-img img-4">
+                  <a href="#">Learn More</a>
+                </div>
+                <br>
+                <div>
+                  <h3 class="slidername">Hawaii</h3>
+                  <p class="slidername">Maui</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide slidemr">
+                <div class="slide-img img-5">
+                  <a href="#">Learn More</a>
+                </div>
+                <br>
+                <div>
+                  <h3 class="slidername">Hawaii</h3>
+                  <p class="slidername">Maui</p>
+                </div>
+              </div>
+            </div>
+          </div>
+           <!--//.ROW-->
+                <div class="section-btn-area schedule-btn-area">
+                   
+                    <a class="lgx-btn lgx-btn-red lgx-btn-big" href="#"><span>View all Speakers</span></a>
+                </div>
                 </div>
             
             </div>
@@ -292,17 +277,49 @@
 <!--SPEAKERS END-->
 
 
+<script>
+        // TINY SLIDER
+let slider = tns({
+  container: ".my-slider",
+  animateIn: "jello",
+  animateOut: "rollOut",
+  slideBy: 1,
+  speed: 200,
+  nav: false,
+  swipeAngle: false,
+  controls: false,
+  autoplay: true,
+  autoplayButtonOutput: false,
+  responsive: {
+    1600: {
+      items: 4,
+      gutter: 20
+    },
+    1024: {
+      items: 3,
+      gutter: 20
+    },
+    768: {
+      items: 2,
+      gutter: 20
+    },
+    480: {
+      items: 1
+    }
+  }
+});
+  </script>
 
     <!--Sponsors-->
 <section>
-    <div id="lgx-news" class="lgx-news">
+    <div id="lgx-partners" class="lgx-news">
         <div class="lgx-inner">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="lgx-heading">
-                            <h2 class="heading">Sponsors</h2>
-                            <h3 class="subheading">Conferences dedicated to building remarkable events.</h3>
+                            <h2 class="heading">Partners</h2>
+                            <h3 class="subheading">GCNS Event Partners for 2023</h3>
                         </div>
                     </div>
                 </div>
