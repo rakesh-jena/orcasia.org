@@ -262,7 +262,8 @@ Route::get('/pages/infographics', function () {
 
 // tags
 
-Route::get('tag/{slug}', 'TagController@show')->name('tag.show');
+// Route::get('tag/{slug}', 'TagController@show')->name('tag.show');
+Route::get('tag/{slug}', [TagController::class,'show'])->name('tag.show');
 Route::post('scheduleRegistration', [RegisterationController::class,'scheduleRegistration'])->name('scheduleRegistration');
 
 Route::get('/pages/gcns', function () {
