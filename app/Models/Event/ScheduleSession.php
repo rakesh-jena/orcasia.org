@@ -10,5 +10,5 @@
      use HasFactory;
 
      protected $table = 'event_session';
-     protected $fillable = ['scheduleId','title','startTime','endTime','description'];
+     protected $fillable = ['scheduleId','title','startTime','endTime','description','sessionTag'];
  }

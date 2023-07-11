@@ -140,7 +140,9 @@
                                                             ?>
                                                             <div class="schedule-info">
                                                                 <h4 class="time">{{$convertedStartTime}} - {{$convertedEndTime}}</h4>
-                                                                <h4 class="time sessiontag">How China sees the world?</h4>
+                                                                @if($session->sessionTag != null)
+                                                                <h4 class="time sessiontag">{{$session->sessionTag}}</h4>
+                                                                @endif
                                                                 <h3 class="title textjustify">{{$session->title}}</h3>
                                                                 
                                                             </div>
@@ -148,11 +150,11 @@
                                                     </a>
                                                 </div>
                                             </div>
-                                            <div id="<?php echo 'collapse'.$accCounter.$sessionCounter; ?>" class="panel-collapse collapse in"
+                                            <div id="<?php echo 'collapse'.$accCounter.$sessionCounter; ?>" class="panel-collapse collapse {{$sessionCounter == 0 ? 'in' : ''}}"
                                                 role="tabpanel" aria-labelledby="<?php echo 'heading'.$accCounter.$sessionCounter; ?>">
                                                 <div class="panel-body">
                                                     <p class="text textjustify">
-                                                        {{$session->description}}
+                                                        {!! $session->description !!}
                                                     </p>
                                                     
                                                 </div>

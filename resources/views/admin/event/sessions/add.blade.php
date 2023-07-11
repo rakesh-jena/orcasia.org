@@ -41,9 +41,13 @@
                         <label for="endTime" class="form-label">End Time</label>
                         <input type="time" class="form-control" id="endTime" name="endTime">
                     </div>
+                    <div class="col-12 col-md-6">
+                        <label for="sessionTag" class="form-label">Tag</label>
+                        <input type="text" class="form-control" id="sessionTag" name="sessionTag">
+                    </div>
                     <div class="col-12">
                         <label for="description" class="form-label">Description</label>
-                        <textarea id="description" name="description" class="form-control" style="height: 100px"></textarea>
+                        <textarea id="description" name="description" class="tinymce-editor form-control" style="height: 100px"></textarea>
                     </div>
                     <div class="text-start">
                         <button type="submit" class="btn btn-primary">Add</button>

@@ -10,7 +10,12 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-center">
-                    <h5 class="card-title">Edit Schedule</h5>
+                    <div class="col-6">
+                        <h5 class="card-title">Edit Session for {{$schedule->title}}</h5>
+                    </div>
+                    <div class="col-6" style="text-align: right;">
+                        <a href="{{ url('yn-admin/event/schedule') }}/{{ $schedule->id }}/edit" type="button"  class="btn btn-primary ">Back</a>
+                    </div>
                 </div>
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -37,9 +42,13 @@
                         <label for="endTime" class="form-label">End Time</label>
                         <input type="time" class="form-control" value="{{$sessionData->endTime}}" id="endTime" name="endTime">
                     </div>
+                    <div class="col-12 col-md-6">
+                        <label for="sessionTag" class="form-label">Tag</label>
+                        <input type="text" class="form-control" value="{{$sessionData->sessionTag}}" id="sessionTag" name="sessionTag">
+                    </div>
                     <div class="col-12">
                         <label for="description" class="form-label">Description</label>
-                        <textarea id="description" name="description" class="form-control" style="height: 100px">{{$sessionData->description}}</textarea>
+                        <textarea id="description" name="description" class="tinymce-editor form-control" style="height: 100px">{{$sessionData->description}}</textarea>
                     </div>
                     <div class="text-start">
                         <button type="submit" class="btn btn-primary">Update</button>

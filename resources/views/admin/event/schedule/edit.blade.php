@@ -48,7 +48,7 @@
                         <div class="card-body">
                             <div class="d-flex align-items-center">
                                 <div class="col-6">
-                                    <h5 class="card-title">Speakers</h5>
+                                    <h5 class="card-title">Sessions</h5>
                                 </div>
                                 <div class="col-6" style="text-align: right;">
                                     <a href="{{ url('yn-admin/event/schedule') }}/{{ $schedule->id }}/sessionAdd" type="button"  class="btn btn-primary ">Add Session</a>

@@ -137,7 +137,6 @@ class ScheduleController extends Controller
             'description' => 'required',
         ]);
         $request = request()->all();
-        
         ScheduleSession::create($request);
         return redirect('yn-admin/event/schedule/'.$request['scheduleId'].'/edit')
             ->with('success', 'Session created successfully.');
@@ -173,6 +172,7 @@ class ScheduleController extends Controller
             'startTime' => $request['startTime'],
             'endTime' => $request['endTime'],
             'description' => $request['description'],
+            'sessionTag' => $request['sessionTag']
         ]);
         
         return redirect('yn-admin/event/schedule/'.$request['scheduleId'].'/edit')
