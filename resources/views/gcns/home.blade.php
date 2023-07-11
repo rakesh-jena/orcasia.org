@@ -285,15 +285,15 @@ let slider = tns({
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-news">
                             <figure>
-                                <a href="#">
+                                <a href="{{$partner->link}}">
                                 <img src="{{url('images/event/partner/'.$partner->logo)}}" alt="{{$partner->title}}">
                                 </a>
                             </figure>
                             <div class="single-news-info">
                             
-                                <h3 class="title"><a href="#">{{$partner->title}}</a></h3>
+                                <h3 class="title"><a href="{{$partner->link}}">{{$partner->title}}</a></h3>
                                 <p>{{$partner->content}}</p>
-                                <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="#"><span>Know More</span></a>
+                                <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="{{$partner->link}}"><span>Know More</span></a>
                             </div>
                         </div>
                     </div>
