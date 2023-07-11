@@ -159,6 +159,11 @@
 .slidemr {
     margin: 2rem!important;
 }
+
+.sessiontag {
+    background: #e41e25!important;
+    color: #fff!important;
+}
 </style>
 
 <body class="home">

@@ -140,6 +140,7 @@
                                                             ?>
                                                             <div class="schedule-info">
                                                                 <h4 class="time">{{$convertedStartTime}} - {{$convertedEndTime}}</h4>
+                                                                <h4 class="time sessiontag">How China sees the world?</h4>
                                                                 <h3 class="title textjustify">{{$session->title}}</h3>
                                                                 
                                                             </div>
