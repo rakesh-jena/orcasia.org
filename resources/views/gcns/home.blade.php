@@ -207,7 +207,10 @@
                             <div class="slide slidemr">
                                 <div class="slide-img">
                                     <img src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}">
-                                    <a href="{{url('event/speaker/'.$speaker->id)}}">Learn More</a>
+                                    <a href="{{ url('event/speaker/') }}/{{ $speaker->id }}">
+                                        Learn More
+                                    </a>
+                                    <!-- <a href="{{url('event/speaker/'.$speaker->id)}}"></a> -->
                                 </div>
                                 <br>
                                 <div>

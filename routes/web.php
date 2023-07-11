@@ -268,4 +268,4 @@ Route::post('scheduleRegistration', [RegisterationController::class,'scheduleReg
 Route::get('/pages/gcns', function () {
     return view('gcns/home');
 });
-Route::get('event/speaker/{id}', [SpeakerController::class, 'getSpeakerData']);
+Route::get('/event/speaker/{id}', [SpeakerController::class, 'getSpeakerData']);
