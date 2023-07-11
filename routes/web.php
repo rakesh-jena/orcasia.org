@@ -44,11 +44,12 @@ use App\Http\Controllers\Event\RegisterationController;
  * ADMIN DASHBOARD URLs
  * ------------------------------------------------------------------------
  * */
-Route::domain('gcns.orcasia.org')->group(function () {
-    Route::get('/', function () {
-        return view('gcns.home');
-    });
-});
+// Route::domain('gcns.orcasia.org')->group(function () {
+//     Route::get('/', function () {
+//         return view('gcns.home');
+//     });
+//     Route::get('event/speaker/{id}', [SpeakerController::class, 'getSpeakerData']);
+// });
 
 Route::middleware(['auth', 'admin'])->group(function () {
     /**Dashboard */
@@ -267,5 +268,4 @@ Route::post('scheduleRegistration', [RegisterationController::class,'scheduleReg
 Route::get('/pages/gcns', function () {
     return view('gcns/home');
 });
-
-
+Route::get('event/speaker/{id}', [SpeakerController::class, 'getSpeakerData']);

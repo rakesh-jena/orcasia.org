@@ -139,4 +139,16 @@ class SpeakerController extends Controller
         
         return $articles;
     }
+
+    public function getSpeakerData($id)
+    {
+        $speaker = Speaker::where('id', $id)->first();
+        
+        if($speaker)
+        {
+            return view('gcns.speaker', compact('speaker'));
+        }else{
+            return redirect('/');
+        }
+    }
 }
