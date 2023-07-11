@@ -1,5 +1,5 @@
 @extends('web')
-@section('title',$tag->tag.' | Organisation for Research on China and Asia')
+@section('title',$tag['tag'].' | Organisation for Research on China and Asia')
 @section('meta_keywords', 'ORCA')
 @section('meta_description', 'ORCA')
 
@@ -17,7 +17,7 @@
         <!-- Intro -->
         <div class="basic-intro text-center">
         <h1 class="title black">
-            <span class="text-1 d-block text-style-2">{{$tag->tag}}</span>
+            <span class="text-1 d-block text-style-2">{{$tag['tag']}}</span>
             
         </h1>
         <div class="description gray">

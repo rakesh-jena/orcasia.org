@@ -67,7 +67,7 @@ class TagController extends Controller
         $a = [];
         foreach($articles as $article){
             $tags = unserialize($article->tags);
-            if(in_array($tag->id, $tags)){                
+            if(in_array($tag['id'], $tags)){                
                 $a[] = $article;
             }
         }
