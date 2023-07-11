@@ -207,7 +207,7 @@
                             <div class="slide slidemr">
                                 <div class="slide-img">
                                     <img src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}">
-                                    <a href="#">Learn More</a>
+                                    <a href="{{url('event/speaker/'.$speaker->id)}}">Learn More</a>
                                 </div>
                                 <br>
                                 <div>
@@ -285,13 +285,13 @@ let slider = tns({
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-news">
                             <figure>
-                                <a href="news-single.html">
+                                <a href="#">
                                 <img src="{{url('images/event/partner/'.$partner->logo)}}" alt="{{$partner->title}}">
                                 </a>
                             </figure>
                             <div class="single-news-info">
                             
-                                <h3 class="title"><a href="news-single.html">{{$partner->title}}</a></h3>
+                                <h3 class="title"><a href="#">{{$partner->title}}</a></h3>
                                 <p>{{$partner->content}}</p>
                                 <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="#"><span>Know More</span></a>
                             </div>
