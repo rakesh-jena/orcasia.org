@@ -4,7 +4,7 @@
 
 <!--Banner Inner-->
 <section>
-        <div class="lgx-banner lgx-banner-inner">
+        <div class="lgx-banner">
             <div class="lgx-page-inner">
                 <div class="container">
                     <div class="row">
@@ -13,11 +13,7 @@
                                 <div class="lgx-heading lgx-heading-white">
                                     <h2 class="heading">{{$speaker->name}}</h2>
                                 </div>
-                                <ul class="breadcrumb">
-                                    <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
-                                    <li><a href="#">Speakers</a></li>
-                                    <li class="active">{{$speaker->name}}</li>
-                                </ul>
+                                
                             </div>
                         </div>
                     </div><!--//.ROW-->
@@ -37,7 +33,7 @@
                             <article>
                                 <header>
                                     <figure>
-                                        <img src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}"/>
+                                        <img class="newspeaker" src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}"/>
                                     </figure>
                                     <div class="text-area">
                                         <div class="speaker-info">
@@ -48,7 +44,7 @@
                                     </div>
                                 </header>
                                 <section>
-                                    <p>
+                                    <p class="textjustify">
                                     {{$speaker->content}}
                                     </p>
                                    

@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <!-- The above 3 meta tags *must* come first in the head -->
 
-    <!-- SITE TITLE -->
+     <!-- SITE TITLE -->
     <title>ORCA | GCNS</title>
     <meta name="description" content="Global Conference on New Sinology" />
     <meta name="keywords" content="GCNS, ORCA" />
-    <meta name="author" content="themearth.com" />
+    <meta name="author" content="kwad.in" />
 
     <!-- twitter card starts from here, if you don't need remove this section -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@yourtwitterusername" />
-    <meta name="twitter:creator" content="@yourtwitterusername" />
-    <meta name="twitter:url" content="http://gcns/orcasia.org" />
+    <meta name="twitter:site" content="@GCNS_ORCA" />
+    <meta name="twitter:creator" content="@GCNS_ORCA" />
+    <meta name="twitter:url" content="http://gcns.orcasia.org" />
     <meta name="twitter:title" content="Global Conference on New Sinology" />
     <!-- maximum 140 char -->
     <meta name="twitter:description" content="Global Conference on New Sinology" />
     <!-- maximum 140 char -->
-    <meta name="twitter:image" content="#" />
+    <meta name="twitter:image" content="https://gcns.orcasia.org/gcns.png" />
     <!-- when you post this page url in twitter , this image will be shown -->
     <!-- twitter card ends from here -->
 
@@ -29,10 +29,11 @@
     <meta property="og:title" content="Global Conference on New Sinology" />
     <meta property="og:url" content="http://gcns.orcasia.org" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Global Conference on New Sinology" />
+    <meta property="og:description" content="Global Conference on New Sinology" />
+    <meta property="og:site_name" content="GCNS" />
     <!--meta property="fb:admins" content="" /--> <!-- use this if you have  -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="#" />
+    <meta property="og:image" content="https://gcns.orcasia.org/gcns.png" />
     <!-- when you post this page url in facebook , this image will be shown -->
     <!-- facebook open graph ends from here -->
 
@@ -116,14 +117,12 @@
 }
 
 .slide-img:hover{
-  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+ 
 }
 
 .slide-img a{
-  opacity: 0;
-  text-decoration: none;
-  transform: scale(0);
-  transition: 0.8s;
+ 
+
   font-size: 1.5rem;
   color: white;
 }
@@ -136,7 +135,7 @@
 
 .slidername {
     color:#fff!important;
-    margin-top:-5px!important;
+   
     margin-bottom:1px!important;
     text-align:center!important;
 }
@@ -148,6 +147,15 @@
 .sessiontag {
     background: #e41e25!important;
     color: #fff!important;
+}
+
+.newspeaker {
+        border-radius: 20px;
+    max-width: 275px;
+    min-width: 375px;
+    max-height: 300px;
+    min-height: 300px;
+    object-fit: cover;
 }
 </style>
 

@@ -10791,7 +10791,10 @@ button:hover:after {
     -moz-transition-duration: .5s;
     -webkit-transition-duration: .5s;
     -o-transition-duration: .5s;
-    transition-duration: .5s
+    transition-duration: .5s;
+        min-height: 375px;
+    max-height: 375px;
+    object-fit: cover;
 }
 
 .lgx-single-news .single-news-info {
