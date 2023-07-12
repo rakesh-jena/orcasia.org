@@ -56,8 +56,16 @@
                                 <td> {{ $registeration->id }} </td>
                                 <td> {{ $registeration->fname }} {{$registeration->lname}}</td>
                                 <?php  
-                                    $schedule = App\Models\Event\Schedule::where('id',$registeration->schedule_id)->first(); ?>
-                                <td> {{ $schedule['title'] }}</td>
+                                    if($registeration->schedule_id == 'day1')
+                                    {
+                                        $scheduleTxt = 'Day one';
+                                    }elseif ($registeration->schedule_id == 'day2') {
+                                        $scheduleTxt = 'Day Two';
+                                    }else{
+                                        $scheduleTxt = 'Both Day';
+                                    }
+                                ?>
+                                <td> {{ $scheduleTxt }}</td>
                                 <td> {{ $registeration->email }}</td>
                                 <td> {{ $registeration->phonenumber }}</td>
                                 <td>

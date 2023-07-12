@@ -54,46 +54,98 @@
                 
                     <div class="lgx-registration-form-box">
                         <h3 class="title">Registration</h3>
-                        <div class="lgx-registration-form">
-                            <input name="text" value="" class="wpcf7-form-control form-control" placeholder="First Name" type="text">
-                            <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Last Name" type="text">
-                            <input name="email" value="" class="wpcf7-form-control form-control" placeholder="Your E-mail ..." type="email">
-                            <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Mobile Number ..." type="text">
-                            <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Occupation" type="text">
-                            <input name="text" value="" class="wpcf7-form-control form-control" placeholder="Current Organisation" type="text">
-                            
-                            <br>
-                            <p style="color: white;">Registering for which days</p>
-                            <br>
-                            <div class="dspflex">
-                            
-                                <div class="radiobtn mr">
-                                    <input type="radio" id="day1"
-                                                name="drone" value="day1" checked />
-                                    <label for="day1">Day One</label>
-                                </div>
-                            
-                                <div class="radiobtn mr">
-                                    <input type="radio" id="day2"
-                                                name="drone" value="day2" />
-                                    <label for="day2">Day Two</label>
-                                </div>
-                            
-                                <div class="radiobtn">
-                                    <input type="radio" id="both"
-                                                name="drone" value="both" />
-                                    <label for="both">Both</label>
-                                </div>
+                        <form method="POST" action="{{ route('scheduleRegistration') }}" id="myRegisterForm">
+                            @csrf
+                            <div class="lgx-registration-form">
+                            <div class="form-group">
+                                <input type="text" class="wpcf7-form-control form-control" id="fname" name="fname" placeholder="First Name" required>
+                                <span class="text-danger"></span>
                             </div>
-                            <!--
-                            <div class="g-recaptcha dspflex" data-sitekey="6LcaDOEcAAAAAMMMjj-8-BQorfN6X5DJIScfRuFz"></div>
-                            -->
-                            <input value="Register Now" class="wpcf7-form-control wpcf7-submit lgx-submit" type="submit">
-                                
-                        </div>
+                            <div class="form-group">
+                                <input type="text" class="wpcf7-form-control form-control" id="lname" name="lname" placeholder="Last Name" required>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="wpcf7-form-control form-control" id="email" name="email" placeholder="Your E-mail ..." required>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="wpcf7-form-control form-control" id="phonenumber" name="phonenumber" placeholder="Mobile Number ..." max="10" required>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="wpcf7-form-control form-control" id="occupation" name="occupation" placeholder="Occupation" required>
+                                <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="wpcf7-form-control form-control" id="organization" name="organization" placeholder="Current Organisation" required>
+                                <span class="text-danger"></span>
+                            </div>
+                                <br>
+                                <p style="color: white;">Registering for which days</p>
+                                <br>
+                                <div class="form-group dspflex">
+                                    <div class="form-check radiobtn mr">
+                                        <input class="form-check-input" type="radio" name="schedule" id="day1" value="day1" checked>
+                                        <label for="day1">Day One</label>
+                                    </div>
+                                    <div class="form-check radiobtn mr">
+                                        <input class="form-check-input" type="radio" name="schedule" id="day2" value="day2">
+                                        <label for="day2">Day Two</label>
+                                    </div>
+                                    <div class="form-check radiobtn mr">
+                                        <input class="form-check-input" type="radio" name="schedule" id="both" value="both">
+                                        <label for="both">Both</label>
+                                    </div>
+                                    <span class="text-danger"></span>
+                                </div>
+                                <!--
+                                <div class="g-recaptcha dspflex" data-sitekey="6LcaDOEcAAAAAMMMjj-8-BQorfN6X5DJIScfRuFz"></div>
+                                -->
+                                <button type="button" class="btn btn-primarywpcf7-form-control wpcf7-submit lgx-submit" onclick="submitRegisterForm()">Register Now</button>
+                                <!-- <input value="Register Now" class="wpcf7-form-control wpcf7-submit lgx-submit" type="submit" onclick="submitRegisterForm()"> -->
+                                    
+                            </div>
+                        </form>
                     </div>
                 
             </div>
         </div>
     </div>
 </div> <!-- //.Modal-->
+
+<script>
+    function submitRegisterForm() {
+        var form = document.getElementById('myRegisterForm');
+        var formData = new FormData(form);
+       
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            
+            if (data.data.length == 0) {
+                // Handle success, e.g., close the modal, show success message, etc.
+                $('#lgx-modal-map').modal('hide');
+                $('#successModal').modal('show');
+                // Additional success handling code
+            } else {
+                // Handle validation errors
+                var errors = data.data;
+                console.log("errors",errors)
+                Object.keys(errors).forEach(function (key) {
+                    var errorField = document.getElementById(key);
+                    var errorMessage = errors[key];
+                    console.log("errorField",errorField,"errorMessage",errorMessage)
+                    errorField.classList.add('is-invalid');
+                    errorField.nextElementSibling.innerText = errorMessage;
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
