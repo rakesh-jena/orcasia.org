@@ -130,7 +130,7 @@
                 // Handle success, e.g., close the modal, show success message, etc.
                 $('#lgx-modal-map').modal('hide');
                 $('#successModal').modal('show');
-                // Additional success handling code
+                form.reset();
             } else {
                 // Handle validation errors
                 var errors = data.data;
