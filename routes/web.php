@@ -26,6 +26,7 @@ use App\Http\Controllers\Event\SpeakerController;
 use App\Http\Controllers\Event\MediaController;
 use App\Http\Controllers\Event\ScheduleController;
 use App\Http\Controllers\Event\RegisterationController;
+use App\Http\Controllers\CSVController;
 
 
 /*
@@ -101,6 +102,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionUpdate/', [ScheduleController::class,'sessionUpdate']);
     Route::delete('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionDestroy/', [ScheduleController::class,'sessionDestroy']);
     Route::resource('yn-admin/event/registeration', RegisterationController::class);
+    Route::get('yn-admin/event/download-csv', [CSVController::class,'download'])->name('download.csv');
 });
 
 /**

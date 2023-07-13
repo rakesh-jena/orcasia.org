@@ -10,7 +10,12 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-center">
-                    <h5 class="card-title">Registeration list</h5>
+                    <div class="col-6">
+                        <h5 class="card-title">Registeration list</h5>
+                    </div>
+                    <div class="col-6" style="text-align: right;">
+                        <a href="{{ route('download.csv') }}" class="btn btn-primary">Download CSV</a>
+                    </div>
                 </div>
                 @if(session('success'))
                     <div class="alert alert-success">
@@ -41,10 +46,12 @@
                         <tr>
                             <!-- <th>#</th> -->
                             <th>id</th>
-                            <th>Name</th>
                             <th>Schdeule</th>
+                            <th>Name</th>
                             <th>Email</th>
-                            <th>Phone</th>
+                            <th>Mobilenumber</th>
+                            <th>Occupation</th>
+                            <th>Organization</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -54,7 +61,6 @@
                             <tr>
                                 <!-- <th><?=$count?></th> -->
                                 <td> {{ $registeration->id }} </td>
-                                <td> {{ $registeration->fname }} {{$registeration->lname}}</td>
                                 <?php  
                                     if($registeration->schedule_id == 'day1')
                                     {
@@ -66,8 +72,11 @@
                                     }
                                 ?>
                                 <td> {{ $scheduleTxt }}</td>
+                                <td> {{ $registeration->fname }} {{$registeration->lname}}</td>
                                 <td> {{ $registeration->email }}</td>
                                 <td> {{ $registeration->phonenumber }}</td>
+                                <td> {{$registeration->occupation}} </td>
+                                <td> {{$registeration->organization}} </td>
                                 <td>
                                     <button data-bs-toggle="modal" data-id="{{$registeration->id}}" data-aurl="{{ url('check-category') }}" data-url="{{ url('yn-admin/event/registeration/'.$registeration['id']) }}"
                                     data-bs-target="#category_delete_modal" class="btn btn-danger rounded-pill btn-sm">Delete</button>
