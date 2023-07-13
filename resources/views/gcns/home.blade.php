@@ -24,10 +24,10 @@
                                 <div class="lgx-banner-info">
                                     <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
                                     <!--banner-info-margin-->
-                                    <h3 class="subtitle">GLOBAL</h3>
-                                    <h2 class="title">Conference on New Sinology</h2>
-                                    <h3 class="location"><i class="fa fa-map-marker"></i> The Grand, New Delhi<br>
-                                        <i class="fa fa-calendar"></i> 25 - 26 SEP 2023
+                                   
+                                    <h2 class="title">Global Conference on New Sinology (GCNS)</h2>
+                                    <a href="https://www.thegrandnewdelhi.com/"><h3 class="location"><i class="fa fa-map-marker"></i> The Grand, New Delhi<br></a>
+                                        <i class="fa fa-calendar"></i> 25 - 26 SEPTEMBER 2023
                                     </h3>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                                 </div>
 
                                 <div class="section-btn-area">
-                                    <a class="lgx-btn" href="#"><span>More About</span></a>
+                                    <a class="lgx-btn" href="#lgx-concept"><span>Concept Note</span></a>
                                     <a class="lgx-btn lgx-btn-red lgx-scroll" id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" href="#"><span>Register</span></a>
                                 </div>
                             </div>
@@ -83,6 +83,33 @@
 </section>
 <!--ABOUT END-->
 
+<!--ABOUT-->
+<section>
+    <?php $aboutData = App\Models\Event\About::orderBy('id', 'asc')->first(); ?>
+    <div id="lgx-concept" class="lgx-about" style="padding-bottom: 7rem;">
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <div class="lgx-about-content-area">
+                            <div class="lgx-banner-info">
+                                <h2 class="title" style="color: black;">Concept Note</h2>
+
+                            </div>
+                            <div class="lgx-about-content textjustify">
+                                {!! $aboutData['content'] !!}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div><!-- //.CONTAINER -->
+        </div><!-- //.INNER -->
+    </div>
+</section>
+<!--ABOUT END-->
+
 
 <!--SCHEDULE-->
 <section>
@@ -93,7 +120,7 @@
                     <div class="col-xs-12">
                         <div class="lgx-banner-info">
                             <h2 class="textalign title" style="color: black;">Schedule</h2>
-                            <p class="textalign mb3">Peruse through the schedule of ORCA's inaugural Global Conference on New Sinology (GCNS)
+                            <p class="textalign mb3">Peruse through the schedule of ORCA's inaugural Global Conference on New Sinology (GCNS).<br><span style="color:#e41e25;">Click on the events to read more.</span>
                             </p>
                         </div>
                     </div>
@@ -143,7 +170,7 @@
                                                                 @if($session->sessionTag != null)
                                                                 <h4 class="time sessiontag">{{$session->sessionTag}}</h4>
                                                                 @endif
-                                                                <h3 class="title textjustify">{{$session->title}}</h3>
+                                                                <h3 class="title">{{$session->title}}</h3>
                                                                 
                                                             </div>
                                                         </div>
@@ -280,7 +307,7 @@ let slider = tns({
                     <div class="col-xs-12">
                         <div class="lgx-heading">
                             <h2 class="heading">Partners</h2>
-                            <h3 class="subheading">GCNS Event Partners for 2023</h3>
+                            <h3 class="subheading">View the work of ORCA's GCNS 2023 Partners below. </h3>
                         </div>
                     </div>
                 </div>
