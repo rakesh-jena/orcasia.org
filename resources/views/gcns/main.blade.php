@@ -91,6 +91,10 @@
 </head>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
     .white-logo {
     filter: brightness(0) invert(1);
 }
@@ -201,14 +205,14 @@
                                     </div>
                                 </div>
                                 <ul class="nav navbar-nav lgx-nav navbar-right">
-                                    <li><a class="lgx-scroll" href="#lgx-about">About</a></li>
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-about">About</a></li>
 
-                                    <li><a class="lgx-scroll" href="#lgx-schedule">Schedule</a></li>
-                                    <li><a class="lgx-scroll" href="#lgx-speakers">Speaker</a></li>
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-schedule">Schedule</a></li>
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-speakers">Speaker</a></li>
                                     
-                                    <li><a class="lgx-scroll" href="#lgx-partners">Partners</a></li>
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-partners">Partners</a></li>
                                 
-                                    <li><a class="lgx-scroll" href="#lgx-contact">Contact</a></li>
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-contact">Contact</a></li>
                                 </ul>
                             </div><!--/.nav-collapse -->
                         </nav>
@@ -240,6 +244,8 @@
                                    
                                    
                                 </ul>
+                                <h3 class="footer-title">Write to us at</h3>
+                                <a class="map-link" href="mailto:gcns.orca@gmail.com" target="_blank">gcns.orca@gmail.com</a>
                             </div>
                             <div class="lgx-footer-single">
                                 <h3 class="footer-title">Venue Location </h3>

@@ -410,7 +410,7 @@ button {
     padding: 1.5rem 4rem;
     display: inline-block;
     letter-spacing: .1rem;
-    background: #554bb9;
+    background: #000;
     -moz-transition-duration: .3s;
     -webkit-transition-duration: .3s;
     -o-transition-duration: .3s;
@@ -435,7 +435,7 @@ button:hover {
 
 .lgx-btn-white,
 .lgx-btn-white:hover {
-    color: #554bb9
+    color: #e41e25;
 }
 
 .lgx-btn span,
@@ -9141,7 +9141,7 @@ button:hover:after {
     font-size: 6.8rem;
     line-height: 10.2rem;
     line-height: 8.5rem;
-    color: #554bb9;
+    color: #e41e25;
     border: 8px solid #ddd;
     width: 200px;
     height: 110px;
@@ -9870,11 +9870,11 @@ button:hover:after {
 }
 
 .lgx-tab .lgx-nav-colorful li:nth-child(1) {
-    background: #e41e25
+    background: #000
 }
 
 .lgx-tab .lgx-nav-colorful li:nth-child(2) {
-    background: #e41e25
+    background: #000;
 }
 
 .lgx-tab .lgx-nav-colorful li:nth-child(3) {
@@ -9890,7 +9890,7 @@ button:hover:after {
 }
 
 .lgx-tab .lgx-nav-colorful .active {
-    background: #554bb9 !important
+    background: #e41e25 !important
 }
 
 .lgx-tab .lgx-nav-colorful .active a:focus,
@@ -11411,7 +11411,7 @@ button:hover:after {
     width: 100%;
     background: #ffffff;
     margin-top: 2rem;
-    color: #554bb9
+    color: #000
 }
 
 .lgx-registration-form-box .lgx-submit:hover,
@@ -12973,7 +12973,7 @@ blockquote.lgx-testi-single:before {
 }
 
 .lgx-social-footer:hover>li:hover a {
-    background: #efa506
+    background: #e41e25;
 }
 
 .lgx-footer-area {
@@ -13034,7 +13034,7 @@ blockquote.lgx-testi-single:before {
 }
 
 .lgx-footer-single .date {
-    color: #efa506;
+    color: #e41e25;
     text-transform: uppercase;
     font-weight: 400
 }
@@ -13049,7 +13049,7 @@ blockquote.lgx-testi-single:before {
     top: 3px;
     font-size: 2.6rem;
     line-height: 3.9000000000000004rem;
-    color: #efa506;
+    color: #e41e25;
     margin-right: 5px
 }
 
@@ -13140,7 +13140,7 @@ blockquote.lgx-testi-single:before {
 
 .lgx-footer-bottom p a,
 .lgx-footer-bottom p span {
-    color: #efa506
+    color: #e41e25;
 }
 
 .lgx-box-layout {
@@ -14100,10 +14100,10 @@ blockquote.lgx-testi-single:before {
 }
 @keyframes blink {
     0% {
-        background-color: #554bb9;
+        background-color: #000;
    }
     10% {
-        background-color: #554bb9;
+        background-color: #000;
    }
     11% {
         background-color: #d43528;
@@ -14112,19 +14112,19 @@ blockquote.lgx-testi-single:before {
         background-color: #d43528;
    }
     30% {
-        background-color: #554bb9;
+        background-color: #000;
    }
     50% {
         background-color: #d43528;
    }
     45% {
-        background-color: #554bb9;
+        background-color: #000;
    }
     50% {
         background-color: #d43528;
    }
     100% {
-        background-color: #554bb9;
+        background-color: #000;
    }
 }
 
@@ -14134,4 +14134,8 @@ blockquote.lgx-testi-single:before {
 
 .navbar-toggle {
     background-color:#000!important;
+}
+
+.text-danger {
+    color:#fff!important;
 }

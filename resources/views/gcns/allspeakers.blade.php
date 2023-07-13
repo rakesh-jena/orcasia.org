@@ -28,8 +28,9 @@
                         <div class="col-xs-12">
                             <div class="lgx-heading-area">
                                 <div class="lgx-heading lgx-heading-white">
-                                    <h2 class="heading">All Speakers</h2>
-                                </div>
+                            <h2 class="heading">Who’s Speaking</h2>
+                            <h3 class="subheading">Our speakers for ORCA's Global Conference on New Sinology 2023</h3>
+                        </div>
                                 
                             </div>
                         </div>
