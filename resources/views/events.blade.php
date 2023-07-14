@@ -23,6 +23,7 @@
               <span class="text-1 text-style-5">Events at </span>
               <span class="text-2 text-style-6"><mark class="animated-underline primary-25">ORCA</mark></span>
             </h1>
+            <p class="description">For the upcoming GCNS, <a href="https://gcns.orcasia.org" style="color:red;">click here.</a></p>
           </div>
           <!-- Gallery -->
           <div class="gallery">

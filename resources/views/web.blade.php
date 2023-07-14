@@ -808,6 +808,11 @@
                <span class="text">The ORCA Files</span>
                </a>
                </li>
+                <li class="nav-item has-megamenu hover">
+               <a class="nav-link dropdown-toggle has-icon" href="https://gcns.orcasia.org">
+               <span class="text" style="color:#e41e25;">GCNS 2023</span>
+               </a>
+               </li>
                <li class="nav-item has-megamenu hover">
                <a class="nav-link dropdown-toggle has-icon" href="{{url('pages/events')}}">
                <span class="text">Events</span>

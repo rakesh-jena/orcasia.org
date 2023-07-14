@@ -199,7 +199,8 @@
                 </div>
                 <!--//.ROW-->
                 <div class="section-btn-area schedule-btn-area">
-                    <a class="lgx-btn lgx-btn-big" href="speakers.html"><span>Download Schedule (PDF)</span></a>
+                    <a class="lgx-btn lgx-btn-big" href="https://orcasia.org/allfiles/ORCA_GCNS_Schedule_2023.pdf" target="
+                    -blank"><span>Download Schedule (PDF)</span></a>
                     <a class="lgx-btn lgx-btn-red lgx-btn-big" href="https://twitter.com/GCNS_ORCA"><span>Connect via
                             Twitter</span></a>
                 </div>

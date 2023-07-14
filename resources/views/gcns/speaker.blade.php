@@ -38,7 +38,7 @@
                                     </figure>
                                     <div class="text-area">
                                         <div class="speaker-info">
-                                            <h1 class="title"><a href="speaker.html">{{$speaker->name}}</a></h1>
+                                            <h1 class="title">{{$speaker->name}}</h1>
                                             <h4 class="subtitle">{{$speaker->designation}}</h4>
                                         </div>
                                       
