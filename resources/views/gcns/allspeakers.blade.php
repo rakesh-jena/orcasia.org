@@ -7,8 +7,8 @@
 <style>
                         .allspeakers {
                             width:100%!important;
-                           max-height:375px;
-                           min-height:375px!important;
+                           max-height:500px;
+                           min-height:500px!important;
                             object-fit:cover!important;
                         }
                         
@@ -44,7 +44,7 @@
 
 
  <!--News-->
-            <section>
+            <section style=" margin-bottom: 1rem; ">
                 <div class="container">
                
                     

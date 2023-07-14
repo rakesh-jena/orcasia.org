@@ -26,7 +26,7 @@
                                     <!--banner-info-margin-->
                                    
                                     <h2 class="title">Global Conference on New Sinology (GCNS)</h2>
-                                    <a href="https://www.thegrandnewdelhi.com/"><h3 class="location"><i class="fa fa-map-marker"></i> The Grand, New Delhi<br></a>
+                                    <a href="https://www.thegrandnewdelhi.com/" target="_blank"><h3 class="location"><i class="fa fa-map-marker"></i> The Grand, New Delhi<br></a>
                                         <i class="fa fa-calendar"></i> 25 - 26 SEPTEMBER 2023
                                     </h3>
                                 </div>
@@ -316,7 +316,7 @@ let slider = tns({
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="lgx-single-news">
                             <figure>
-                                <a href="{{$partner->link}}">
+                                <a href="{{$partner->link}}" target="_blank">
                                 <img src="{{url('images/event/partner/'.$partner->logo)}}" alt="{{$partner->title}}">
                                 </a>
                             </figure>

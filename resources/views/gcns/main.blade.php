@@ -208,7 +208,7 @@ html {
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-about">About</a></li>
 
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-schedule">Schedule</a></li>
-                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-speakers">Speaker</a></li>
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-speakers">Speakers</a></li>
                                     
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-partners">Partners</a></li>
                                 
