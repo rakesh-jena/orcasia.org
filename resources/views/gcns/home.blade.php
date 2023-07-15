@@ -150,7 +150,7 @@
 
                                     <div class="panel-group" id="<?php echo 'accordion'.$accCounter; ?>" role="tablist" aria-multiselectable="true">
                                     
-                                    <?php $sessionData = App\Models\Event\ScheduleSession::orderBy('id', 'asc')->where('scheduleId',$schedule['id'])->get(); ?>
+                                    <?php $sessionData = App\Models\Event\ScheduleSession::orderBy('startTime', 'asc')->where('scheduleId',$schedule['id'])->get(); ?>
                                     <?php $sessionCounter = 0; ?>
                                     @foreach($sessionData as $session)
                                         <div class="panel panel-default lgx-panel">

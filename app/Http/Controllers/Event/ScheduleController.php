@@ -65,7 +65,7 @@ class ScheduleController extends Controller
     public function edit($id)
     {
         $schedule = Schedule::where('id', $id)->first();
-        $scheduleSession = ScheduleSession::where('scheduleId',$schedule->id)->get();
+        $scheduleSession = ScheduleSession::where('scheduleId',$schedule->id)->orderBy('startTime', 'asc')->get();
         
         return view('admin.event.schedule.edit', compact('schedule','scheduleSession'));
     }
