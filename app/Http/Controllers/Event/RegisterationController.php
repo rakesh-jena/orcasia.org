@@ -75,14 +75,12 @@ class RegisterationController extends Controller
             }
             $newCreateUser = Registeration::create($request);
             $name= $newCreateUser['fname'].' '.$newCreateUser['lname'];
+            $toEmail= $newCreateUser['email'];
 
-            //  Mail::to('hiteshpwr93@yahoo.com')->send(new EventRegisteration($name));
+            
+            Mail::to($toEmail)->send(new EventRegisteration($name));
             return $this->successApiResponse('Form submitted successfully');
         }
-        // Session::flash('success', 'Registration completed successfully!');
-        // return redirect('pages/events')
-        //     ->with('success', 'Registration completed successfully!');
-        
     }
     
 

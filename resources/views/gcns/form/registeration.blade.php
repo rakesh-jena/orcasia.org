@@ -53,8 +53,8 @@
             <div class="modal-body">
                 
                     <div class="lgx-registration-form-box">
-                        <h3 class="title">Registrations for the Global Conference on New Sinology (GCNS) 2023 will open in August!</h3>
-                     <!--   <form method="POST" action="{{ route('scheduleRegistration') }}" id="myRegisterForm">
+                        <!-- <h3 class="title">Registrations for the Global Conference on New Sinology (GCNS) 2023 will open in August!</h3> -->
+                       <form method="POST" action="{{ route('scheduleRegistration') }}" id="myRegisterForm">
                             @csrf
                             <div class="lgx-registration-form">
                             <div class="form-group">
@@ -104,7 +104,7 @@
                                
                                     
                             </div>
-                        </form> -->
+                        </form>
                     </div>
                 
             </div>
