@@ -267,38 +267,38 @@
 
 <script>
         // TINY SLIDER
-let slider = tns({
-  container: ".my-slider",
-  animateIn: "jello",
-  animateOut: "rollOut",
-  slideBy: 1,
-  speed: 200,
-  nav: false,
-  swipeAngle: false,
-  controls: false,
-  autoplay: true,
-  autoplayButtonOutput: false,
-  responsive: {
-    1600: {
-      items: 4,
-      gutter: 20
-    },
-    1024: {
-      items: 3,
-      gutter: 20
-    },
-    768: {
-      items: 2,
-      gutter: 20
-    },
-    480: {
-      items: 1
+    let slider = tns({
+    container: ".my-slider",
+    animateIn: "jello",
+    animateOut: "rollOut",
+    slideBy: 1,
+    speed: 200,
+    nav: false,
+    swipeAngle: false,
+    controls: false,
+    autoplay: true,
+    autoplayButtonOutput: false,
+    responsive: {
+        1600: {
+        items: 4,
+        gutter: 20
+        },
+        1024: {
+        items: 3,
+        gutter: 20
+        },
+        768: {
+        items: 2,
+        gutter: 20
+        },
+        480: {
+        items: 1
+        }
     }
-  }
-});
-  </script>
+    });
+</script>
 
-    <!--Sponsors-->
+<!--Sponsors-->
 <section>
 <?php $partnerData = App\Models\Event\Partner::orderBy('id', 'asc')->get(); ?>
     <div id="lgx-partners" class="lgx-news">
@@ -327,6 +327,37 @@ let slider = tns({
                                 <p>{{$partner->content}}</p>
                                 <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="{{$partner->link}}"><span>Know More</span></a>
                             </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                
+            </div><!-- //.CONTAINER -->
+        </div><!-- //.INNER -->
+    </div>
+</section>
+<!--Sponsors END-->
+<!--Sponsors-->
+<section>
+<?php $mediaData = App\Models\Event\Media::orderBy('sequence_no', 'asc')->get(); ?>
+    <div id="lgx-media" class="lgx-news">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-heading">
+                            <h2 class="heading">Media</h2>
+                            <h3 class="subheading">View the work of ORCA's GCNS 2023 Media below. </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach($mediaData as $media)
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="lgx-single-news">
+                            <figure>
+                                <img src="{{url('images/event/media/'.$media->files)}}" alt="{{$partner->title}}">
+                            </figure>
                         </div>
                     </div>
                     @endforeach
