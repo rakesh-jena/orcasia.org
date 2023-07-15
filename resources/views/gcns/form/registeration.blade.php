@@ -51,8 +51,11 @@
                     aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
-                
+                   
                     <div class="lgx-registration-form-box">
+                    <div id="loader" class="spinner-border text-primary" role="status" style="display: none;">
+                        <span class="sr-only">Loading...</span>
+                    </div>
                         <!-- <h3 class="title">Registrations for the Global Conference on New Sinology (GCNS) 2023 will open in August!</h3> -->
                        <form method="POST" action="{{ route('scheduleRegistration') }}" id="myRegisterForm">
                             @csrf
@@ -116,14 +119,16 @@
     function submitRegisterForm() {
         var form = document.getElementById('myRegisterForm');
         var formData = new FormData(form);
-       
+        var loader = document.getElementById('loader');
+        loader.style.display = 'block';
+
         fetch(form.action, {
             method: 'POST',
             body: formData
         })
         .then(response => response.json())
         .then(data => {
-            
+            loader.style.display = 'none';
             if (data.data.length == 0) {
                 // Handle success, e.g., close the modal, show success message, etc.
                 $('#lgx-modal-map').modal('hide');
