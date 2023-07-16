@@ -17,9 +17,11 @@ class EventRegisteration extends Mailable
      * @return void
      */
     public $name;
-    public function __construct($name)
+    public $schedule;
+    public function __construct($name,$schedule)
     {
         $this->name = $name;
+        $this->schedule = $schedule;
     }
 
     /**
