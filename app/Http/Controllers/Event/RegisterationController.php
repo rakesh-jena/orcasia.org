@@ -76,7 +76,15 @@ class RegisterationController extends Controller
             $newCreateUser = Registeration::create($request);
             $name= $newCreateUser['fname'].' '.$newCreateUser['lname'];
             $toEmail= $newCreateUser['email'];
-            $schedule=$newCreateUser['schedule'];
+            if($newCreateUser['schedule_id'] == 'day1')
+            {
+                $schedule = 'Day one';
+            }elseif ($newCreateUser['schedule_id'] == 'day2') {
+                $schedule = 'Day Two';
+            }else{
+                $schedule = 'Both Day';
+            }
+
             
             Mail::to($toEmail)->send(new EventRegisteration($name,$schedule));
             return $this->successApiResponse('Form submitted successfully');
