@@ -94,7 +94,7 @@
          <nav id="navbar" class="navbar navbar-expand-lg fixed-scroll hover-line-center scheme-1 primary">
             <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand" href="{{url('/')}}">
+            <a class="navbar-brand" href="{{url('https://orcasia.org')}}">
                <!-- <div class="site-title">Site Title</div> -->
                <img src="{{ URL::asset('images/ORCA Website Banner Logo PNG.png') }}" alt="ORCA" class="logo main-logo" />
                <img src="{{ URL::asset('images/ORCA Website Banner Logo PNG.png') }}" alt="ORCA" class="logo sticky-logo" />
