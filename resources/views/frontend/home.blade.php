@@ -421,7 +421,7 @@ document.getElementById('popup-box-dismiss').addEventListener('click', subscribe
           <div class="slide-content">
             
             <div class="slide-description">
-             <a href="{{url('article/'.$article->id)}}/{{$article->slug}}"> <span class="text-2 text-style-7 text-italic white">India-China Trade Dashboard</span></a>
+             <a href="https://orcasia.org/pages/india-china-trade-dashboard"> <span class="text-2 text-style-7 text-italic white">India-China Trade Dashboard</span></a>
               <div class="description gray">
                 <p class="subtitledesign">The dashboard is part of ORCA’s India-China Trade Project.</p>
               </div>
