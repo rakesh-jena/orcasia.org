@@ -59,7 +59,7 @@
         <!-- Intro -->
         <div class="basic-intro text-center">
           <h1 class="title black">
-            <span class="text-1 d-block text-style-2">The ORCA Files</span>
+            <span class="text-1 d-block text-style-2"> <i style="color:black;" class="fa-solid fa-headphones icon"></i> The ORCA Files</span>
 
           </h1>
           <div class="description gray">
@@ -68,6 +68,41 @@
         </div>
       </div>
     </section>
+    
+     <!-- Image -->
+    <section class="shock-section mt-4">
+      <div class="overflow-hiddenn">
+        <div class="row g-0">
+          <div class="col-12 col-md-6">
+            <!-- Circular text -->
+            <div class="circular-text d-only-desktop">
+              <div class="emblem to-top-right gray">O R C A • F I L E S •</div>
+            </div>
+            <!-- Image -->
+            <div class="image-wrapper">
+             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0FHweHMZorkLCVJ9QJYQ1B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            </div>
+          </div>
+          <div class="col-12 col-md-6 align-v-center">
+            <div class="holder p-5">
+              <!-- Intro -->
+              <div class="basic-intro mb-2">
+                <h2 class="title text-style-5">
+                  <span class="text-1 h6 d-block gray-75" data-lax="inertia-top">July 26, 2023</span>
+                  <span class="text-2 txtfont2 d-block black">EP 10: Lam Tran and Akshat Singh on India-Australia Economic Cooperation and Trade Agreement Amidst China Factor</span>
+                </h2>
+                <div class="description gray">
+                  <p>In this episode of The ORCA Files, host Ahana Roy engages in an insightful discussion with two esteemed guests, Lam Tran and Akshat Singh from CSIS, to explore the India-Australia Economic Cooperation and Trade Agreement (IA-ECTA) and its implications for both nations and the region as well. Lam and Akshat delve into the key provisions of the agreement, the sectors likely to benefit, and how it addresses challenges like talent shortages and manufacturing base expansion for Australia. The conversation also sheds light on China's coercive economic measures and their impact on countries like Australia and India and how the IA-ECTA could empower these nations to mitigate vulnerabilities. The discussion concluded with the recent visit by Indian PM Narendra Modi to the US and how the IA-ECTA can align with broader Indo-US partnership goals of diversifying supply chains and fostering economic resilience. You can read read the CSIS article on this topic here: <a href="https://features.csis.org/hiddenreach/china-critical-mineral-gallium/index.html">https://features.csis.org/hiddenreach/china-critical-mineral-gallium/index.html</a></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- Image -->
     <section class="shock-section mt-4">

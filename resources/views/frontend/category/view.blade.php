@@ -20,7 +20,7 @@
             </h1>
             <div class="description gray">
               <p>{{ $category->title }}</p>
-                <p>(Views mentioned in the {{$category->category}} belong to the author(s) alone.)</p>
+                <p>(Views mentioned in the {{$category->category}} vertical belong to the author(s) alone.)</p>
             </div>
           </div>
         </div>

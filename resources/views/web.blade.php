@@ -57,6 +57,19 @@
       <link rel="stylesheet" href="{{ URL::asset('css/core.css') }}" />
       <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
       
+     
+      
+          <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-47RCM817YL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-47RCM817YL');
+    </script>
+    
+     <!---google analytics close---->
       
       
    </head>
@@ -265,6 +278,13 @@
                                                 <span class="text">Reviewing Chinese Culture </span>
                                                 </a>
                                              </li>
+                                             
+                                             <li class="nav-item">
+                                                <a href="{{url('category/orca-in-hatha')}}" class="nav-link parent">
+                                                <span class="text">ORCA in हिन्दी </span>
+                                                </a>
+                                             </li>
+                                             
                                           </ul>
                                        </div>
                                     </div>
@@ -751,6 +771,7 @@
                                  @endforeach
                               </div>
                            </div>
+                               <a style="color:black; padding-left:1rem;" href="https://orcasia.org/category/mapping-china">Explore More</a>
                         </div>
                             <div id="elements-5" class="tab-pane fade" role="tabpanel">
                            <div class="row g-3">
@@ -805,7 +826,7 @@
                </li>
                <li class="nav-item has-megamenu hover">
                <a class="nav-link dropdown-toggle has-icon" href="{{url('pages/orcafiles')}}">
-               <span class="text">The ORCA Files</span>
+               <span class="text"> <i style="color:black;" class="fa-solid fa-headphones icon"></i> The ORCA Files</span>
                </a>
                </li>
                 <li class="nav-item has-megamenu hover">
@@ -1011,7 +1032,7 @@
          <div class="footer-content focus-trigger">
             <div class="container">
                <div class="row g-3">
-                  <div class="col-12 col-md-6 col-lg-3">
+                  <div class="col-12 col-md-6 col-lg-4">
                      <div class="footer-item">
                         <!-- Brand -->
                         <a href="#" class="footer-brand">
@@ -1051,7 +1072,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-3">
+                  <div class="col-12 col-md-6 col-lg-4">
                      <div class="footer-item">
                         <h6 class="title">Quick Links</h6>
                         <!-- Links list -->
@@ -1085,11 +1106,9 @@
                         </ul>
                      </div>
                   </div>
-                  <div class="col-12 col-md-6 col-lg-6">
+                  <div class="col-12 col-md-6 col-lg-4">
                      <div class="footer-item">
-                        <a class="twitter-timeline" data-height="265" data-theme="dark"
-                           href="https://twitter.com/ORCA_India?ref_src=twsrc%5Etfw">Tweets by ORCA_India</a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        <a href="https://twitter.com/ORCA_India?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ORCA_India</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                      </div>
                   </div>
                </div>

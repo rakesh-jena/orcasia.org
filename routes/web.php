@@ -247,6 +247,8 @@ Route::get('/pages/infographics', function () {
 });
 
 
+
+
 /**
  * ------------------------------------------------------------------------
  * ORCA Contact form

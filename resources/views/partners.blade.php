@@ -89,6 +89,15 @@
                     <p class="mt-1 mb-1 text-center"><strong>Academic and Research Cooperation Partner: </strong>Flame University is an exceptional platform for students who can explore their academic journeys but not without the help of its renowned faculty and solid leadership. Experts from diverse backgrounds and qualifications and phenomenal industry experience guide the students at FLAME.
 </p>
                   </div>
+                  <div class="col-lg-4">
+                    <a href="https://niice.org.np/" target="_blank" class="item hover-grayscale">
+                      <div class="image-wrapper">
+                        <div class="overlay has-border rounded black"></div>
+                        <img style=" padding: 3rem!important;" src="{{ URL::asset('images/PPF_Logo.png') }}" class="image p-1 fit-cover" />
+                      </div>
+                    </a>
+                    <p class="mt-1 mb-1 text-center"><strong>Research and Event Cooperation Partner: </strong>The Policy Perspectives Foundation (PPF) was founded in 2005 as a non-profit and apolitical think-tank on matters of national interest. The organisation’s activities focus on complex and inter-connected challenges to internal peace, stability and development in India.</p>
+                  </div>
                 </div>
               </div>
             </div>
