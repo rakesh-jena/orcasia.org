@@ -31,7 +31,7 @@ class EventRegisteration extends Mailable
      */
     public function build()
     {   
-        return $this->subject('Welcome to Event')
+        return $this->subject('Registration Confirmation Received: ORCA\'s GCNS 2023')
                     ->view('emails.eventRegisteration');
     }
 }

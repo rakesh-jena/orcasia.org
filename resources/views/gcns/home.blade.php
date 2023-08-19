@@ -2,6 +2,13 @@
 
 @section('content')
 
+<style>
+    @media (min-width: 1200px) {
+.container {
+    width: 1169px!important;}
+    }
+</style>
+
 <!--BANNER-->
 <section>
     <div class="lgx-banner">
@@ -325,7 +332,7 @@
                             
                                 <h3 class="title"><a href="{{$partner->link}}">{{$partner->title}}</a></h3>
                                 <p>{{$partner->content}}</p>
-                                <a class="lgx-btn lgx-btn-white lgx-btn-sm" href="{{$partner->link}}"><span>Know More</span></a>
+                                <a class="lgx-btn lgx-btn-white lgx-btn-sm" target="_blank" href="{{$partner->link}}"><span>Know More</span></a>
                             </div>
                         </div>
                     </div>
@@ -337,7 +344,7 @@
     </div>
 </section>
 <!--Sponsors END-->
-<!--Sponsors-->
+<!--
 <section>
 <?php $mediaData = App\Models\Event\Media::orderBy('sequence_no', 'asc')->get(); ?>
     <div id="lgx-media" class="lgx-news">
@@ -363,11 +370,11 @@
                     @endforeach
                 </div>
                 
-            </div><!-- //.CONTAINER -->
-        </div><!-- //.INNER -->
+            </div>
+        </div>
     </div>
-</section>
-<!--Sponsors END-->
+</section> -->
+
 @endsection
       
       

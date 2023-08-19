@@ -16,6 +16,106 @@
                             width:100%!important;
                             padding:0!important;
                         }
+                        
+
+.slidername{
+    color:#000!important;
+}                        
+
+.
+.video-sec-wrap {
+	width: 100%;
+	min-height: 100vh;
+}
+.video-sec {
+	width: 85%;
+	margin: 3em auto;
+	border-bottom: 2px solid #353535;
+	text-align: left;
+}
+.video-sec-middle {
+	grid-template-columns: repeat(4,1fr);
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	grid-template-rows: auto;
+	grid-row-gap: 15px;
+	grid-column-gap: 10px;
+	padding: 20px 0;
+}
+.thumb-wrap {
+	display: inline;
+	cursor: pointer;
+}
+.thumb {
+	display: block;
+	margin: .4em;
+	width: 100%;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	opacity: 1;
+	transition: all .2s ease-in-out;
+}
+.thumb:hover {
+	opacity: .8;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .5);
+}
+.thumb-info {
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	padding: .4em;
+}
+.thumb-title {
+	color: #f5f5f5;
+	margin: 0;
+	font-size: 1.2em;
+}
+.thumb-user {
+	color: #7e7e7e;
+	display: block;
+	margin: 0;
+	font-size: .9em;
+}
+.thumb-text {
+	color: #7e7e7e;
+	display: inline-block;
+	margin: 0;
+	font-size: .8em;
+}
+.video-sec-title {
+	font-weight: bolder;
+	font-size: 1.4em;
+	color: #f5f5f5;
+	margin: 5px 0 10px 10px;
+}
+.video-showmore {
+	font-weight: bold;
+	font-variant: all-petite-caps;
+	display: block;
+	color: #7e7e7e;
+	padding: 10px;
+	font-size: 1.2em;
+}
+@media only screen and (max-width: 1456px) {
+	.video-sec-middle {
+		grid-template-columns: repeat(4,1fr);
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.video-sec-middle {
+	  grid-template-columns: repeat(3,1fr);
+	}
+}
+@media only screen and (max-width: 756px) {
+  .video-sec-middle {
+   grid-template-columns: repeat(2,1fr);
+  }
+}
+@media only screen and (max-width: 496px) {
+  .video-sec-middle {
+   grid-template-columns: repeat(1,1fr);
+  }
+}
                     </style>
                     
                     
@@ -44,7 +144,7 @@
 
 
  <!--News-->
-            <section style=" margin-bottom: 1rem; ">
+         <!--   <section style=" margin-bottom: 1rem; ">
                 <div class="container">
                
                     
@@ -55,11 +155,11 @@
                                  @foreach($speakerData as $speaker)
                                 <div  class="lgx-gallery-single">
                                     <figure>
-                                        <img class="allspeakers" title="Memories One" src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}"/>
+                                        <img class="allspeakers" title="{{$speaker->name}}" src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}"/>
                                         <figcaption class="lgx-figcaption">
                                             <div class="lgx-hover-link">
                                                 <div class="lgx-vertical">
-                                                    <a title="Memories One" href="{{ url('event/speaker/') }}/{{ $speaker->id }}">
+                                                    <a title="{{$speaker->name}}" href="{{ url('event/speaker/') }}/{{ $speaker->id }}">
                                                         <div>
                                     <h3 class="slidername">{{$speaker->name}}</h3>
                                     <p class="slidername">{{$speaker->designation}}</p>
@@ -69,18 +169,40 @@
                                             </div>
                                         </figcaption>
                                     </figure>
-                                </div> <!--Single photo-->
+                                </div>
                                 @endforeach
                                
                             </div>
-                        </div> <!--//.COL-->
+                        </div> 
                   
                
 
                </div>
 
-            </section>
+            </section> -->
             <!--News END-->
+            
+            <section>
+                <article class="video-sec-wrap">
+			<div class="video-sec">
+				
+				<ul class="video-sec-middle" id="vid-grid">
+				     <?php $speakerData = App\Models\Event\Speaker::orderBy('id', 'asc')->get(); ?>
+                                 @foreach($speakerData as $speaker)
+					<li class="thumb-wrap"><a href="{{ url('event/speaker/') }}/{{ $speaker->id }}">
+						<img class="thumb allspeakers" src="{{url('images/event/speaker/'.$speaker->image)}}" alt="{{$speaker->name}}">
+						<div class="thumb-info">
+							 <h3 class="slidername">{{$speaker->name}}</h3>
+                            <p class="slidername">{{$speaker->designation}}</p>
+						</div>
+					</a></li>
+					 @endforeach
+					
+				</ul>
+			
+			</div>
+		</article>
+            </section>
 
 
 
