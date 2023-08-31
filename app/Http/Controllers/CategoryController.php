@@ -169,9 +169,9 @@ class CategoryController extends Controller
 
     public function check_if_used(Request $request)
     {
-        $id = $request->id;
-        $articles = Article::select('title','id', 'slug')->where('category', $id)->get();
-        
+        // $id = $request->id;
+        // $articles = Article::select('title','id', 'slug')->where('category', $id)->get();
+        $articles = array();
         return $articles;
     }
 }
