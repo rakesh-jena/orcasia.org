@@ -73,6 +73,45 @@
     <section class="shock-section mt-4">
       <div class="overflow-hiddenn">
         <div class="row g-0">
+          <div class="col-12 col-md-6 align-v-center order-2 order-md-1">
+            <div class="holder p-5">
+              <!-- Intro -->
+              <div class="basic-intro mb-2">
+                <h2 class="title text-style-5">
+                  <span class="text-1 h6 d-block gray-75" data-lax="inertia-top">Aug 24, 2023</span>
+                  <span class="text-2 txtfont2 d-block black">EP 11: Richard Bitzinger on China's Military Industrial Complex, Modernization Program and Evolving Civil-Military Relations</span>
+                </h2>
+                <div class="description gray">
+                  <p>In this episode of The ORCA Files, host and Director of ORCA, Eerishika Pankaj sits down with Richard Bitzinger for a captivating conversation about the state and progress of China's military modernization program. They talk about the features of modernization: intelligentisation, indegenisation of emerging technologies, civil-military integration and the political rules governing the appointment of personnel in the military. The insights presented by Richard Bitzinger provide a comprehensive overview of the CMC's role in military technology innovation, the emphasis of modernization reforms and where China is headed this decade. The conversation covers several themes detailed in Richard Bitzinger's latest book written with Dr. Yoram Evron, "The Fourth Industrial Revolution and Military-Civil Fusion". Access it <a target="_blank" href="https://www.cambridge.org/core/books/fourth-industrial-revolution-and-militarycivil-fusion/EA51BD4755084C48EB47397DFDC6E522">here.</a></p>
+                </div>
+              </div>
+              <!-- Button -->
+              <!-- <a href="#your-link" class="button arrow-button next scheme-1 secondary">
+                  <span class="arrow">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                  </span>
+                  <span class="line"></span>
+                  <span class="text black">Download Podcast</span>
+                </a> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-6 order-1 order-md-2">
+            <!-- Image -->
+            <div class="image-wrapper">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0eMumtySrMfv8eyQ1gzQQ5?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     <!-- Image -->
+    <section class="shock-section mt-4">
+      <div class="overflow-hiddenn">
+        <div class="row g-0">
           <div class="col-12 col-md-6">
             <!-- Circular text -->
             <div class="circular-text d-only-desktop">
@@ -93,7 +132,7 @@
                   <span class="text-2 txtfont2 d-block black">EP 10: Lam Tran and Akshat Singh on India-Australia Economic Cooperation and Trade Agreement Amidst China Factor</span>
                 </h2>
                 <div class="description gray">
-                  <p>In this episode of The ORCA Files, host Ahana Roy engages in an insightful discussion with two esteemed guests, Lam Tran and Akshat Singh from CSIS, to explore the India-Australia Economic Cooperation and Trade Agreement (IA-ECTA) and its implications for both nations and the region as well. Lam and Akshat delve into the key provisions of the agreement, the sectors likely to benefit, and how it addresses challenges like talent shortages and manufacturing base expansion for Australia. The conversation also sheds light on China's coercive economic measures and their impact on countries like Australia and India and how the IA-ECTA could empower these nations to mitigate vulnerabilities. The discussion concluded with the recent visit by Indian PM Narendra Modi to the US and how the IA-ECTA can align with broader Indo-US partnership goals of diversifying supply chains and fostering economic resilience. You can read read the CSIS article on this topic here: <a href="https://features.csis.org/hiddenreach/china-critical-mineral-gallium/index.html">https://features.csis.org/hiddenreach/china-critical-mineral-gallium/index.html</a></p>
+                  <p>In this episode of The ORCA Files, host Ahana Roy engages in an insightful discussion with two esteemed guests, Lam Tran and Akshat Singh from CSIS, to explore the India-Australia Economic Cooperation and Trade Agreement (IA-ECTA) and its implications for both nations and the region as well. Lam and Akshat delve into the key provisions of the agreement, the sectors likely to benefit, and how it addresses challenges like talent shortages and manufacturing base expansion for Australia. The conversation also sheds light on China's coercive economic measures and their impact on countries like Australia and India and how the IA-ECTA could empower these nations to mitigate vulnerabilities. The discussion concluded with the recent visit by Indian PM Narendra Modi to the US and how the IA-ECTA can align with broader Indo-US partnership goals of diversifying supply chains and fostering economic resilience. You can read read the CSIS article on this topic here: <a target="_blank" href="https://features.csis.org/hiddenreach/china-critical-mineral-gallium/index.html">https://features.csis.org/hiddenreach/china-critical-mineral-gallium/index.html</a></p>
                 </div>
               </div>
 
@@ -158,10 +197,7 @@
       <div class="overflow-hiddenn">
         <div class="row g-0">
           <div class="col-12 col-md-6">
-            <!-- Circular text -->
-            <div class="circular-text d-only-desktop">
-              <div class="emblem to-top-right gray">O R C A • F I L E S •</div>
-            </div>
+            
             <!-- Image -->
             <div class="image-wrapper">
              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0LsKR9g5Kk6NDurauRpq7l?utm_source=generator&t=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
