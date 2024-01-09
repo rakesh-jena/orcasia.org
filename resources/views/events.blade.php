@@ -17,14 +17,27 @@
       <!-- Images -->
       <section class="shock-section has-holder pt-4 pb-8">
         <div class="container max-w-85">
+            
           <!-- Intro -->
           <div class="basic-intro text-center mb-5">
             <h1 class="title black">
               <span class="text-1 text-style-5">Events at </span>
               <span class="text-2 text-style-6"><mark class="animated-underline primary-25">ORCA</mark></span>
             </h1>
-            <p class="description">For the upcoming GCNS, <a href="https://gcns.orcasia.org" style="color:red;">click here.</a></p>
+            <p class="description">To view all pictures of GCNS 2023, <a href="https://orcasia.org/pages/gcns#lgx-media" target="_blank" style="color:red;">click here.</a></p>
           </div>
+                   <!-- Banner -->
+      <section class="shock-section mt-2 bg-image bg-fixed" data-bg-image="{{ URL::asset('images/gcnsorca.jpg')}}">
+        <div class="banner vh-65 align-h-center align-v-center">
+          <div class="holder">
+            
+          </div>
+        </div>          
+        <!-- Overlay -->
+        <div class="overlay gray-25"></div>
+      </section>
+      
+      <br><br>
           <!-- Gallery -->
           <div class="gallery">
             <div class="row g-2">

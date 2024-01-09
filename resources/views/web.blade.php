@@ -478,6 +478,12 @@
                               Special Issues
                               </button>
                            </li>
+                            <li class="nav-item" role="presentation">
+                              <button id="elements-1-tab" class="title nav-link" aria-selected="true"
+                                 aria-controls="elements-1" data-bs-target="#elements-6" data-bs-toggle="tab" role="tab">
+                              Special Reports
+                              </button>
+                           </li>
                            <li class="nav-item" role="presentation">
                               <button id="elements-2-tab" class="title nav-link" aria-selected="false"
                                  aria-controls="elements-2" data-bs-target="#elements-2" data-bs-toggle="tab" role="tab">
@@ -820,6 +826,52 @@
                 @endforeach
                            </div>
                         </div>
+                          <div id="elements-6" class="tab-pane fade" role="tabpanel">
+                           <div class="row g-3">
+                               <div class="col-12 col-md-6 col-lg-4">
+                                                   <div class="megamenu-item">
+                                                      <h6 class="title">Special Reports</h6>
+                                                      <ul class="nav-list list-unstyled">
+                                                         <li class="nav-item">
+                                                            <a href="{{url('https://orcasia.org/allfiles/The-Prince-and-All-His-Men-Predicting-Personnel-Changes-in-the-20th-NPC_2022.pdf')}}" class="nav-link parent">
+                                                            <span class="text">ORCA Special Report 1</span>
+                                                            </a>
+                                                         </li>
+                                                          <li class="nav-item">
+                                                            <a href="{{url('https://orcasia.org/allfiles/GCNS_2023_Report.pdf')}}" class="nav-link parent">
+                                                            <span class="text">ORCA Special Report 2</span>
+                                                            </a>
+                                                         </li>
+                                                        
+                                                      </ul>
+                                                   </div>
+                                                </div>
+                                  
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card has-image shadow parent">
+                <!-- Image -->
+                <div class="image-wrapper imageheighter hover-zoom">
+                  <img src="{{URL::asset('images/sprepo1.png')}}" alt="Image name" class="image" />
+                </div>
+               
+                <!-- Link -->
+               <a href="{{url('https://orcasia.org/allfiles/The-Prince-and-All-His-Men-Predicting-Personnel-Changes-in-the-20th-NPC_2022.pdf')}}" class="full-link"></a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card has-image shadow parent">
+                <!-- Image -->
+                <div class="image-wrapper imageheighter hover-zoom">
+                  <img src="{{URL::asset('images/sperepo2.png')}}" alt="Image name" class="image" />
+                </div>
+               
+                <!-- Link -->
+               <a href="{{url('https://orcasia.org/allfiles/GCNS_2023_Report.pdf')}}" class="full-link"></a>
+              </div>
+            </div>
+           
+                           </div>
+                        </div>
                                        
                           
                         </div>
@@ -829,10 +881,57 @@
                <span class="text"> <i style="color:black;" class="fa-solid fa-headphones icon"></i> The ORCA Files</span>
                </a>
                </li>
-                <li class="nav-item has-megamenu hover">
-               <a class="nav-link dropdown-toggle has-icon" href="https://gcns.orcasia.org">
-               <span class="text" style="color:#e41e25;">GCNS 2023</span>
-               </a>
+                 <li class="nav-item dropdown has-megamenu hover">
+                  <a class="nav-link dropdown-toggle has-icon" href="#" data-bs-toggle="dropdown">
+                  <span class="text">GCNS 2023</span><img class="image-icon dropdown-icon"
+                     src="{{ URL::asset('svg/chevron-down-outline.svg') }}" alt="Icon name" data-shock-icon="32" />
+                  </a>
+                  <div class="dropdown-menu megamenu animate fade-down" role="menu">
+                     <div class="container">
+                        <div class="section-inner-expanded">
+                           <div class="row">
+                              <div class="col-12 col-md-6">
+                                  <a href="{{url('pages/publication')}}">
+                                    <div class="megamenu-item h-auto mb-0 pb-0">
+                                       <h6 class="title"></h6>
+                                    </div>
+                                 </a>
+                                 <div class="row">
+                                    <div class="col-12 col-md-6">
+                                       <div class="megamenu-item pt-0">
+                                          <ul class="nav-list list-unstyled">
+                                             <li class="nav-item">
+                                                <a href="http://gcns.orcasia.org" class="nav-link parent">
+                                                <span class="text">About GCNS 2023</span>
+                                                </a>
+                                             </li>
+                                             <li class="nav-item">
+                                                <a href="https://orcasia.org/allfiles/GCNS_2023_Report.pdf" target="_blank" class="nav-link parent">
+                                                <span class="text">ORCA's GCNS 2023 Conference Report</span>
+                                                </a>
+                                             </li>
+                                             
+                                          </ul>
+                                       </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                       <div class="megamenu-item pt-0">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-6">
+                                 <div class="megamenu-item has-side-image image-absolute-right">
+                                    <a href="{{url('pages/team')}}" class="megamenu-image black">
+                                    <img src="{{ URL::asset('images/IMG_0049-2.jpg') }}" alt="Image name" class="image">
+                                    
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </li>
                <li class="nav-item has-megamenu hover">
                <a class="nav-link dropdown-toggle has-icon" href="{{url('pages/events')}}">
@@ -969,6 +1068,7 @@
                      </h2>
                      <div class="description white">
                         <p class="white">Get a daily dose of local and national news from China, top trends in Chinese social media and what it means for India and the region at large.</p>
+                        
                      </div>
                   </div>
                </div>

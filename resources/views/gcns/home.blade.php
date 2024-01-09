@@ -18,20 +18,32 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="lgx-banner-info-area">
+                                <!--
                                 <div class="lgx-banner-info-circle">
                                     <div class="info-circle-inner">
                                         <h3 class="date"><b class="lgx-counter">25</b> <span>September</span>
                                         </h3>
                                         <div class="lgx-countdown-area">
-                                            <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  -->
+                                            <!-- Date Format :"Y/m/d" || For Example: 1017/10/5  --><!--
                                             <div id="lgx-countdown" data-date="2023/09/25"></div>
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <div class="lgx-banner-info">
                                     <!--lgx-banner-info-center lgx-banner-info-black lgx-banner-info-big lgx-banner-info-bg-->
                                     <!--banner-info-margin-->
-                                   
+                                    <style>
+                                        .lgx-btn-font {
+                                            font-size:20px!important;
+                                        }
+                                        .lgx-mg-btm {
+                                        margin-bottom:4rem!important;
+                                        }
+                                    </style>
+                                    <div class="lgx-cart-area lgx-mg-btm">
+                                        <a class="lgx-btn lgx-btn-font lgx-btn-red" target="_blank" href="https://orcasia.org/allfiles/GCNS_2023_Report.pdf">Download ORCA's GCNS 2023 Conference Report</a>
+                                    </div>
                                     <h2 class="title">Global Conference on New Sinology (GCNS)</h2>
                                     <a href="https://www.thegrandnewdelhi.com/" target="_blank"><h3 class="location"><i class="fa fa-map-marker"></i> The Grand, New Delhi<br></a>
                                         <i class="fa fa-calendar"></i> 25 - 26 SEPTEMBER 2023
@@ -73,7 +85,7 @@
 
                                 <div class="section-btn-area">
                                     <a class="lgx-btn" href="#lgx-concept"><span>Concept Note</span></a>
-                                    <a class="lgx-btn lgx-btn-red lgx-scroll" id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" href="#"><span>Register</span></a>
+                                    <a class="lgx-btn lgx-btn-red lgx-scroll" target="_blank" href="https://orcasia.org/ORCA's_GCNS_2023_Handbook.pdf"><span>Download Handbook</span></a>
                                 </div>
                             </div>
                         </div>
@@ -271,6 +283,41 @@
 </section>
 <!--SPEAKERS END-->
 
+<!--- gallery ---->
+
+<section>
+
+    <div id="lgx-media" class="lgx-news">
+        <div class="lgx-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="lgx-heading">
+                            <h2 class="heading">Media</h2>
+                            <h3 class="subheading">View the work of ORCA's GCNS 2023 Media below. </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <style>
+                        .sk-fb-photo-album-load-more-posts {
+                            margin-top:4rem!important;
+                        }
+                    </style>
+                   
+                    <div class='sk-ww-flickr-album-single' data-embed-id='236856'></div><script src='https://widgets.sociablekit.com/flickr-album-single/widget.js' async defer></script>
+ 
+                  
+                </div>
+                
+            </div><!-- //.CONTAINER -->
+        </div><!-- //.INNER -->
+    </div>
+</section>
+
+
+     
+
 
 <script>
         // TINY SLIDER
@@ -344,6 +391,7 @@
     </div>
 </section>
 <!--Sponsors END-->
+
 <!--
 <section>
 <?php $mediaData = App\Models\Event\Media::orderBy('sequence_no', 'asc')->get(); ?>

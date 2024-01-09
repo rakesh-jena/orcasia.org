@@ -201,7 +201,7 @@ html {
                             <div id="navbar" class="navbar-collapse collapse">
                                 <div class="lgx-nav-right navbar-right">
                                     <div class="lgx-cart-area">
-                                        <a class="lgx-btn lgx-btn-red" id="myModalLabel2" data-toggle="modal" data-target="#lgx-modal-map" href="#">Register</a>
+                                        <a class="lgx-btn lgx-btn-red" target="_blank" href="https://orcasia.org/allfiles/GCNS_2023_Report.pdf">Download GCNNS Report</a>
                                     </div>
                                 </div>
                                 <ul class="nav navbar-nav lgx-nav navbar-right">
@@ -209,7 +209,7 @@ html {
 
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-schedule">Schedule</a></li>
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-speakers">Speakers</a></li>
-                                    
+                                    <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-media">Media</a></li>
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-partners">Partners</a></li>
                                 
                                     <li><a class="lgx-scroll" href="https://orcasia.org/pages/gcns#lgx-contact">Contact</a></li>

@@ -69,6 +69,82 @@
       </div>
     </section>
     
+      <!-- Image -->
+    <section class="shock-section mt-4">
+      <div class="overflow-hiddenn">
+        <div class="row g-0">
+          <div class="col-12 col-md-6 align-v-center order-2 order-md-1">
+            <div class="holder p-5">
+              <!-- Intro -->
+              <div class="basic-intro mb-2">
+                <h2 class="title text-style-5">
+                  <span class="text-1 h6 d-block gray-75" data-lax="inertia-top">Dec 13, 2023</span>
+                  <span class="text-2 txtfont2 d-block black">EP 13: Dr. Monish Tourangbam on The India-U.S Relationship:From Geopolitical Compulsion to Strategic Convergence</span>
+                </h2>
+                <div class="description gray">
+                  <p>For this episode of the ORCA Files, Ratish Mehta, Research Associate at ORCA, speaks with Dr. Monish Tourangbam on the growing India- U.S bilateral engagement in recent years. Dr. Monish traces the relationship trajectory from the Cold War period to its current stature and elaborates on various points in time where cooperation has taken prominence between the two countries. The discussion also brings to light specific sectors and regions in which both New Delhi and Washington can convert their convergence into cooperation, especially in South Asia. Dr. Tourangbam also draws attention to some structural divergences that India and the US face as well as how such differences can be mitigated against, in favour of the broader convergence of interests.
+
+<br>You can read his recent paper on the India-US-China Triangle in South Asia: Competition Drives Adaptation by clicking -
+ <a target="_blank" href="https://www.isas.nus.edu.sg/papers/the-india-us-china-triangle-in-south-asia-competition-drives-adaptation/">here.</a></p>
+                </div>
+              </div>
+              <!-- Button -->
+              <!-- <a href="#your-link" class="button arrow-button next scheme-1 secondary">
+                  <span class="arrow">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                  </span>
+                  <span class="line"></span>
+                  <span class="text black">Download Podcast</span>
+                </a> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-6 order-1 order-md-2">
+            <!-- Image -->
+            <div class="image-wrapper">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1PC1lKX7qSkcwdgyymitOl?utm_source=generator&t=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+     <!-- Image -->
+    <section class="shock-section mt-4">
+      <div class="overflow-hiddenn">
+        <div class="row g-0">
+          <div class="col-12 col-md-6">
+            <!-- Circular text -->
+            <div class="circular-text d-only-desktop">
+              <div class="emblem to-top-right gray">O R C A • F I L E S •</div>
+            </div>
+            <!-- Image -->
+            <div class="image-wrapper">
+             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4oF0OBlGTnjHXzEzaWWLXi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            </div>
+          </div>
+          <div class="col-12 col-md-6 align-v-center">
+            <div class="holder p-5">
+              <!-- Intro -->
+              <div class="basic-intro mb-2">
+                <h2 class="title text-style-5">
+                  <span class="text-1 h6 d-block gray-75" data-lax="inertia-top">Nov 8, 2023</span>
+                  <span class="text-2 txtfont2 d-block black">EP 12: Melissa Conley Tyler on The Role of Think Tanks in Modern Diplomacy</span>
+                </h2>
+                <div class="description gray">
+                  <p>In this episode of The ORCA Files, Omkar Bhole from ORCA speaks with Ms. Melissa Conley Tyler from University Melbourne about the significance of think tanks in modern diplomacy and the role these institutions play during crisis situations. She defines think tanks as institutions that try to influence quality of policymaking in a country by producing intellectual outputs as well as perform diplomatic functions like communicating with counterparts from other countries and promoting their country’s interests globally. She expresses the need for think tanks to work for bridging the gap between common citizens and policymakers by engaging more with them especially in niche fields like international relations. Ms. Melissa also delves into the functioning of Chinese think tanks in a state-controlled environment and the role they play in promoting China’s views globally by engaging with other think tanks.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
      <!-- Image -->
     <section class="shock-section mt-4">
       <div class="overflow-hiddenn">
@@ -113,10 +189,7 @@
       <div class="overflow-hiddenn">
         <div class="row g-0">
           <div class="col-12 col-md-6">
-            <!-- Circular text -->
-            <div class="circular-text d-only-desktop">
-              <div class="emblem to-top-right gray">O R C A • F I L E S •</div>
-            </div>
+            
             <!-- Image -->
             <div class="image-wrapper">
              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0FHweHMZorkLCVJ9QJYQ1B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

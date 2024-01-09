@@ -141,6 +141,7 @@ if(Auth::check()){
                      <div class="description gray">
                         <p class="graycolor">Get a daily dose of local and national news from China, top trends in Chinese social media and what it means for India and the region at large.</p>
                                             <p>
+                                                <p class="white"><a href="https://orcasia.org/allfiles/GCNS_2023_Report.pdf" target="_blank" style="color:#e74646">Read ORCA's GCNS 2023 Conference Report</a></p>
 
 
                      </div>

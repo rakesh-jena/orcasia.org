@@ -175,7 +175,7 @@ a {
 a.active,
 a:focus,
 a:hover {
-    color: #7870c7;
+    color: #fff;
     -moz-transition-duration: .3s;
     -webkit-transition-duration: .3s;
     -o-transition-duration: .3s;

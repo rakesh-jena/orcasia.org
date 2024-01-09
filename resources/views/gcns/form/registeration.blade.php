@@ -56,10 +56,11 @@
                     <div id="loader" class="spinner-border text-primary" role="status" style="display: none;">
                         <span class="sr-only">Loading...</span>
                     </div>
-                       <h3 class="title">The first round of registrations for GCNS 2023 is now closed. The next round of registrations will begin soon!
+                       <h3 class="title">Registrations for ORCA's GCNS have now closed.</h3>
 
-<br>Follow <a href="https://twitter.com/GCNS_ORCA?s=20">@GCNS_ORCA</a> on Twitter for updates.</h3> 
-                 <!--     <form method="POST" action="{{ route('scheduleRegistration') }}" id="myRegisterForm">
+<!-- <br>Follow <a href="https://twitter.com/GCNS_ORCA?s=20">@GCNS_ORCA</a> on Twitter for updates.</h3> -->
+<br>
+            <!--    <form method="POST" action="{{ route('scheduleRegistration') }}" id="myRegisterForm">
                             @csrf
                             <div class="lgx-registration-form">
                             <div class="form-group">
