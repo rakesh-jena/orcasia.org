@@ -246,6 +246,10 @@ Route::get('/pages/infographics', function () {
     return view('infographics');
 });
 
+Route::get('/pages/paschange', function () {
+    return view('paschange');
+});
+
 
 
 
