@@ -578,4 +578,9 @@
 
         $(e.currentTarget).find('#cypEvent_delete_form').attr("action", url);
     });
+    $('#orcafile_delete_modal').on('show.bs.modal', function(e) {
+        var url = $(e.relatedTarget).data('url');
+
+        $(e.currentTarget).find('#orcafile_delete_form').attr("action", url);
+    });
 })();

@@ -1,4 +1,4 @@
-<?php $user_meta = App\Models\UserMeta::where('user_id',Auth::user()->id)->first();?>
+<?php $user_meta = App\Models\UserMeta::where('user_id', Auth::user()->id)->first(); ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -12,26 +12,25 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    
-<link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('images/favicon/apple-icon-57x57.png') }}">
-<link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('images/favicon/apple-icon-60x60.png') }}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('images/favicon/apple-icon-72x72.png') }}">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('images/favicon/apple-icon-76x76.png') }}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('images/favicon/apple-icon-114x114.png') }}">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('images/favicon/apple-icon-120x120.png') }}">
-<link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('images/favicon/apple-icon-144x144.png') }}">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('images/favicon/apple-icon-152x152.png') }}') }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('images/favicon/apple-icon-180x180.png') }}">
-<link rel="icon" type="image/png" sizes="192x192"  href="{{ URL::asset('images/favicon/android-icon-192x192.png') }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('images/favicon/favicon-32x32.png') }}">
-<link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('images/favicon/favicon-96x96.png') }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('images/favicon/favicon-16x16.png') }}">
-<link rel="manifest" href="{{ URL::asset('images/favicon/manifest.json') }}">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="{{ URL::asset('images/favicon/ms-icon-144x144.png') }}">
-<meta name="theme-color" content="#ffffff">
 
-   
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ URL::asset('images/favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ URL::asset('images/favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ URL::asset('images/favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ URL::asset('images/favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('images/favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ URL::asset('images/favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('images/favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ URL::asset('images/favicon/apple-icon-152x152.png') }}') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL::asset('images/favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"
+        href="{{ URL::asset('images/favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL::asset('images/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('images/favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL::asset('images/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ URL::asset('images/favicon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ URL::asset('images/favicon/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -43,8 +42,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/choices.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.css" />
 
     <!-- Template Main CSS File -->
     <link href="{{ URL::asset('css/admin.css') }}" rel="stylesheet">
@@ -56,7 +55,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="{{url('/')}}" class="logo d-flex align-items-center">
+            <a href="{{ url('/') }}" class="logo d-flex align-items-center">
                 <img src="{{ URL::asset('images/ORCA Website Banner Logo PNG.png') }}" alt="logo">
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -68,10 +67,11 @@
             <ul class="d-flex align-items-center">
                 <li class="nav-item dropdown pe-3">
 
-                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <img src="{{ URL::asset('images/author/'.$user_meta->avatar) }}" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">{{Auth::user()->name}}</span>
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="{{ URL::asset('images/author/' . $user_meta->avatar) }}" alt="Profile"
+                            class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">{{ Auth::user()->name }}</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile" style="">
@@ -96,34 +96,40 @@
     <aside id="sidebar" class="sidebar">
         <ul class="sidebar-nav" id="sidebar-nav">
             <li class="nav-item">
-                @if(request()->is('yn-admin'))
-                <a class="nav-link" href="{{url('yn-admin')}}">
-                @else
-                <a class="nav-link collapsed" href="{{url('yn-admin')}}">
+                @if (request()->is('yn-admin'))
+                    <a class="nav-link" href="{{ url('yn-admin') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin') }}">
                 @endif
-                    <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/articles'))
-                <a class="nav-link" data-bs-target="#articles-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
-                @else
-                <a class="nav-link collapsed" data-bs-target="#articles-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                @if (str_contains(url()->current(), '/yn-admin/articles'))
+                    <a class="nav-link" data-bs-target="#articles-nav" data-bs-toggle="collapse" href="#"
+                        aria-expanded="true">
+                    @else
+                        <a class="nav-link collapsed" data-bs-target="#articles-nav" data-bs-toggle="collapse"
+                            href="#" aria-expanded="false">
                 @endif
-                    <i class="bi bi-journal-text"></i>
-                    <span>Articles</span>
-                    <i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-journal-text"></i>
+                <span>Articles</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="articles-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/articles')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
+                <ul id="articles-nav"
+                    class="nav-content collapse <?= str_contains(url()->current(), '/yn-admin/articles') ? 'show' : '' ?>"
+                    data-bs-parent="#sidebar-nav" style="">
                     <li>
-                        <a href="{{url('yn-admin/articles')}}" class="<?=(request()->is('yn-admin/articles')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/articles') }}"
+                            class="<?= request()->is('yn-admin/articles') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>All</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('yn-admin/articles/create')}}" class="<?=(request()->is('yn-admin/articles/create')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/articles/create') }}"
+                            class="<?= request()->is('yn-admin/articles/create') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Add</span>
                         </a>
                     </li>
@@ -131,23 +137,29 @@
             </li><!-- End Article Nav -->
 
             <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/users'))
-                <a class="nav-link" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
-                @else
-                <a class="nav-link collapsed" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                @if (str_contains(url()->current(), '/yn-admin/users'))
+                    <a class="nav-link" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#"
+                        aria-expanded="true">
+                    @else
+                        <a class="nav-link collapsed" data-bs-target="#users-nav" data-bs-toggle="collapse"
+                            href="#" aria-expanded="false">
                 @endif
-                    <i class="bi bi-vector-pen"></i>
-                    <span>Authors</span>
-                    <i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-vector-pen"></i>
+                <span>Authors</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="users-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/users')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
+                <ul id="users-nav"
+                    class="nav-content collapse <?= str_contains(url()->current(), '/yn-admin/users') ? 'show' : '' ?>"
+                    data-bs-parent="#sidebar-nav" style="">
                     <li>
-                        <a href="{{url('yn-admin/users')}}" class="<?=(request()->is('yn-admin/users')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/users') }}"
+                            class="<?= request()->is('yn-admin/users') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>All</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('yn-admin/users/create')}}" class="<?=(request()->is('yn-admin/users/create')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/users/create') }}"
+                            class="<?= request()->is('yn-admin/users/create') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Add</span>
                         </a>
                     </li>
@@ -155,181 +167,152 @@
             </li><!-- End User Nav -->
 
             <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/category'))
-                <a class="nav-link" href="{{ url('yn-admin/category') }}">
-                @else
-                <a class="nav-link collapsed" href="{{ url('yn-admin/category') }}">
+                @if (str_contains(url()->current(), '/yn-admin/category'))
+                    <a class="nav-link" href="{{ url('yn-admin/category') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin/category') }}">
                 @endif
-                    <i class="bi bi-list-columns-reverse"></i>
-                    <span>Category</span>
+                <i class="bi bi-list-columns-reverse"></i>
+                <span>Category</span>
                 </a>
             </li><!-- End Category Nav -->
 
             <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/tags'))
-                <a class="nav-link" href="{{ url('yn-admin/tags') }}">
-                @else
-                <a class="nav-link collapsed" href="{{ url('yn-admin/tags') }}">
+                @if (str_contains(url()->current(), '/yn-admin/tags'))
+                    <a class="nav-link" href="{{ url('yn-admin/tags') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin/tags') }}">
                 @endif
-                    <i class="bi bi-tags-fill"></i>
-                    <span>Tag</span>
+                <i class="bi bi-tags-fill"></i>
+                <span>Tag</span>
                 </a>
             </li><!-- End Tag Nav -->
 
             <li class="nav-item">
-                @if(request()->is('yn-admin/subscribers'))
-                <a class="nav-link" href="{{url('yn-admin/subscribers')}}">
-                @else
-                <a class="nav-link collapsed" href="{{url('yn-admin/subscribers')}}">
+                @if (request()->is('yn-admin/subscribers'))
+                    <a class="nav-link" href="{{ url('yn-admin/subscribers') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin/subscribers') }}">
                 @endif
-                    <i class="bi bi-people"></i>
-                    <span>Subscribers</span>
+                <i class="bi bi-people"></i>
+                <span>Subscribers</span>
                 </a>
             </li><!-- End Subscribers Nav -->
 
             <li class="nav-item">
-                @if(request()->is('yn-admin/all-users'))
-                <a class="nav-link" href="{{url('yn-admin/all-users')}}">
-                @else
-                <a class="nav-link collapsed" href="{{url('yn-admin/all-users')}}">
+                @if (request()->is('yn-admin/all-users'))
+                    <a class="nav-link" href="{{ url('yn-admin/all-users') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin/all-users') }}">
                 @endif
-                    <i class="bi bi-person"></i>
-                    <span>All Users</span>
+                <i class="bi bi-person"></i>
+                <span>All Users</span>
                 </a>
             </li><!-- End All Users Nav -->
-            
-            
-        <li class="nav-item">
-                 @if(request()->is('yn-admin/graphsPage'))
-                 <a class="nav-link" href="{{url('yn-admin/graphsPage')}}">
-                 @else
-                 <a class="nav-link collapsed" href="{{url('yn-admin/graphsPage')}}">
-                 @endif
-                     <i class="bi bi-people"></i>
-                     <span>Team Page</span>
-                 </a>
-             </li>
 
-             <li class="nav-item">
-                 @if(request()->is('yn-admin/fileUpload'))
-                 <a class="nav-link" href="{{url('yn-admin/fileUpload')}}">
-                 @else
-                 <a class="nav-link collapsed" href="{{url('yn-admin/fileUpload')}}">
-                 @endif
-                     <i class="bi bi-people"></i>
-                     <span>File Uploader</span>
-                 </a>
-             </li><!-- End GraphsPage Nav -->
-             <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/event'))
-                <a class="nav-link" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
-                @else
-                <a class="nav-link collapsed" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+            <li class="nav-item">
+                @if (request()->is('yn-admin/graphsPage'))
+                    <a class="nav-link" href="{{ url('yn-admin/graphsPage') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin/graphsPage') }}">
                 @endif
-                    <i class="bi bi-journal-text"></i>
-                    <span>Event</span>
-                    <i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-people"></i>
+                <span>Team Page</span>
                 </a>
-                <ul id="event-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/event')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
+            </li>
+
+            <li class="nav-item">
+                @if (request()->is('yn-admin/fileUpload'))
+                    <a class="nav-link" href="{{ url('yn-admin/fileUpload') }}">
+                    @else
+                        <a class="nav-link collapsed" href="{{ url('yn-admin/fileUpload') }}">
+                @endif
+                <i class="bi bi-people"></i>
+                <span>File Uploader</span>
+                </a>
+            </li><!-- End GraphsPage Nav -->
+            <li class="nav-item">
+                @if (str_contains(url()->current(), '/yn-admin/event'))
+                    <a class="nav-link" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#"
+                        aria-expanded="true">
+                    @else
+                        <a class="nav-link collapsed" data-bs-target="#event-nav" data-bs-toggle="collapse"
+                            href="#" aria-expanded="false">
+                @endif
+                <i class="bi bi-journal-text"></i>
+                <span>Event</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="event-nav"
+                    class="nav-content collapse <?= str_contains(url()->current(), '/yn-admin/event') ? 'show' : '' ?>"
+                    data-bs-parent="#sidebar-nav" style="">
                     <li>
-                        <a href="{{url('yn-admin/event/registeration')}}" class="<?=(request()->is('yn-admin/event/registeration')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/event/registeration') }}"
+                            class="<?= request()->is('yn-admin/event/registeration') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Registerations Listing</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('yn-admin/event/schedule')}}" class="<?=(request()->is('yn-admin/event/schedule')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/event/schedule') }}"
+                            class="<?= request()->is('yn-admin/event/schedule') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Schedule</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('yn-admin/event/partner')}}" class="<?=(request()->is('yn-admin/event/partner')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/event/partner') }}"
+                            class="<?= request()->is('yn-admin/event/partner') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Partner</span>
                         </a>
                     </li>
                     <li>
-                    <a href="{{url('yn-admin/event/about')}}" class="<?=(request()->is('yn-admin/event/about')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/event/about') }}"
+                            class="<?= request()->is('yn-admin/event/about') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>About</span>
                         </a>
                     </li>
                     <li>
-                    <a href="{{url('yn-admin/event/speaker')}}" class="<?=(request()->is('yn-admin/event/speaker')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/event/speaker') }}"
+                            class="<?= request()->is('yn-admin/event/speaker') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Speaker</span>
                         </a>
                     </li>
                     <li>
-                    <a href="{{url('yn-admin/event/media')}}" class="<?=(request()->is('yn-admin/event/media')) ? 'active' : '';?>">
+                        <a href="{{ url('yn-admin/event/media') }}"
+                            class="<?= request()->is('yn-admin/event/media') ? 'active' : '' ?>">
                             <i class="bi bi-circle"></i><span>Media</span>
                         </a>
                     </li>
                 </ul>
             </li><!-- End Event Nav -->
-         <!--   <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/profiles'))
-                <a class="nav-link" data-bs-target="#profiles-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
-                @else
-                <a class="nav-link collapsed" data-bs-target="#profiles-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+            <li class="nav-item">
+                @if (str_contains(url()->current(), '/yn-admin/orcafiles'))
+                    <a class="nav-link" data-bs-target="#orcafiles-nav" data-bs-toggle="collapse" href="#"
+                        aria-expanded="true">
+                    @else
+                        <a class="nav-link collapsed" data-bs-target="#orcafiles-nav" data-bs-toggle="collapse"
+                            href="#" aria-expanded="false">
                 @endif
-                    <i class="bi bi-journal-text"></i>
-                    <span>25under25</span>
-                    <i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bi bi-journal-text"></i>
+                <span>Orcafiles</span>
+                <i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="profiles-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/profiles')) ? 'show':'';?> <?=(str_contains(url()->current(), '/yn-admin/design_25under25')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
+                <ul id="orcafiles-nav"
+                    class="nav-content collapse <?= str_contains(url()->current(), '/yn-admin/orcafiles') ? 'show' : '' ?>"
+                    data-bs-parent="#sidebar-nav" style="">
                     <li>
-                        <a href="{{url('yn-admin/profiles')}}" class="<?=(request()->is('yn-admin/profiles')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>All Profiles</span>
+                        <a href="{{ url('yn-admin/orcafiles') }}"
+                            class="<?= request()->is('yn-admin/orcafiles') ? 'active' : '' ?>">
+                            <i class="bi bi-circle"></i><span>All</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('yn-admin/profiles/create')}}" class="<?=(request()->is('yn-admin/profiles/create')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>Add Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{url('yn-admin/design_25under25')}}" class="<?=(request()->is('yn-admin/design_25under25')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>Design</span>
+                        <a href="{{ url('yn-admin/orcafiles/create') }}"
+                            class="<?= request()->is('yn-admin/orcafiles/create') ? 'active' : '' ?>">
+                            <i class="bi bi-circle"></i><span>Add</span>
                         </a>
                     </li>
                 </ul>
-            </li><!-- End Profile Nav -->
-            
-          <!--  <li class="nav-item">
-                @if(str_contains(url()->current(), '/yn-admin/cyp') || str_contains(url()->current(), '/yn-admin/cyp'))
-                <a class="nav-link" data-bs-target="#cyp-nav" data-bs-toggle="collapse" href="#" aria-expanded="true">
-                @else
-                <a class="nav-link collapsed" data-bs-target="#cyp-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
-                @endif
-                    <i class="bi bi-journal-text"></i>
-                    <span>Events</span>
-                    <i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="cyp-nav" class="nav-content collapse <?=(str_contains(url()->current(), '/yn-admin/cyp')) ? 'show':'';?>" data-bs-parent="#sidebar-nav" style="">
-                    <li>
-                        <a href="{{url('yn-admin/cyp')}}" class="<?=(request()->is('yn-admin/cyp')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>All Events</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{url('yn-admin/cyp/create')}}" class="<?=(request()->is('yn-admin/cyp/create')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>Add Event</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{url('yn-admin/cyp_eventTypes')}}" class="<?=(request()->is('yn-admin/cyp_eventTypes')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>Event Types</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{url('yn-admin/cyp/volunteers')}}" class="<?=(request()->is('yn-admin/cyp/volunteers')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>Volunteers</span>
-                        </a>
-                    </li>
-                   <!-- <li>
-                        <a href="{{url('yn-admin/cyp_design')}}" class="<?=(request()->is('yn-admin/cyp_design')) ? 'active' : '';?>">
-                            <i class="bi bi-circle"></i><span>Design</span>
-                        </a>
-                    </li> 
-                </ul>
-            </li><!-- End CYP Nav -->
+            </li><!-- End Article Nav -->
         </ul>
     </aside>
     <!-- End Sidebar-->
@@ -337,7 +320,7 @@
     <!-- Main Content Wrapper -->
     @yield('content')
     <!-- End Main Content Wrapper -->
-    
+
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="credits">

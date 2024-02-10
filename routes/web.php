@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrcaFileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AuthorController;
@@ -103,6 +104,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('yn-admin/event/schedule/{scheduleId}/{sessionId}/sessionDestroy/', [ScheduleController::class,'sessionDestroy']);
     Route::resource('yn-admin/event/registeration', RegisterationController::class);
     Route::get('yn-admin/event/download-csv', [CSVController::class,'download'])->name('download.csv');
+    //OrcaFiles Routes
+    Route::resource('yn-admin/orcafiles', OrcaFileController::class);
 });
 
 /**
@@ -196,9 +199,7 @@ Route::get('/pages/partners', function () {
     return view('partners');
 });
 
-Route::get('/pages/orcafiles', function () {
-    return view('orcafiles');
-});
+Route::get('/pages/orcafiles', [OrcaFileController::class, 'show']);
 
 
 Route::get('/pages/india-china-trade-dashboard', function () {
