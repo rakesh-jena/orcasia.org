@@ -18,14 +18,15 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    
+
     <!-- Template Main CSS File -->
     <link href="{{ URL::asset('css/admin.css') }}" rel="stylesheet">
 </head>
@@ -40,8 +41,9 @@
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
                             <div class="d-flex justify-content-center py-4">
-                                <a href="{{url('/')}}" class="logo d-flex align-items-center">
-                                    <img src="{{ URL::asset('images/NAAISlogo_alt_blue-01.png') }}" alt="yif" width="280">
+                                <a href="{{ url('/') }}" class="logo d-flex align-items-center">
+                                    <img src="{{ URL::asset('images/NAAISlogo_alt_blue-01.png') }}" alt="yif"
+                                        width="280">
                                 </a>
                             </div><!-- End Logo -->
 
@@ -60,8 +62,8 @@
                                         <div class="col-12">
                                             <label for="yourEmail" class="form-label">Email</label>
                                             <div class="input-group has-validation">
-                                                <input type="email" name="email" class="form-control"
-                                                    id="yourEmail" required>
+                                                <input type="email" name="email" class="form-control" id="yourEmail"
+                                                    required>
                                                 <div class="invalid-feedback">Please enter your email.</div>
                                             </div>
                                         </div>

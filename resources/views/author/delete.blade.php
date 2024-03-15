@@ -1,5 +1,5 @@
-<div class="modal fade" id="author_article_delete_modal" tabindex="-1" role="dialog"
-    aria-labelledby="delete_modalTitle" aria-hidden="true">
+<div class="modal fade" id="author_article_delete_modal" tabindex="-1" role="dialog" aria-labelledby="delete_modalTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,12 +9,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete the article?                
+                Are you sure you want to delete the article?
             </div>
             <div class="modal-footer">
                 <form class="forms-sample" action="" id="author_article_delete_form" method="POST">
                     @csrf
-                    @method('DELETE')             
+                    @method('DELETE')
                     <button type="submit" class="btn btn-gradient-danger mr-2 btn-rounded btn-sm">Delete</button>
                 </form>
                 <button class="btn btn-light btn-rounded btn-sm" data-bs-dismiss="modal">Cancel</button>

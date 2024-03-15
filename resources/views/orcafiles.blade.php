@@ -89,7 +89,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6 order-1 order-md-2">                            
+                        <div class="col-12 col-md-6 order-1 order-md-2">
                             <!-- Image -->
                             <div class="image-wrapper">
                                 <iframe style="border-radius:12px" src="{{ $orcafile->embed_code }}" width="100%"
@@ -101,10 +101,10 @@
                         </div>
                     @else
                         <div class="col-12 col-md-6">
-                            @if($count == 2)
-                            <div class="circular-text d-only-desktop">
-                                <div class="emblem to-top-right gray">O R C A • F I L E S •</div>
-                            </div>
+                            @if ($count == 2)
+                                <div class="circular-text d-only-desktop">
+                                    <div class="emblem to-top-right gray">O R C A • F I L E S •</div>
+                                </div>
                             @endif
                             <!-- Image -->
                             <div class="image-wrapper">
