@@ -1208,7 +1208,8 @@
                   </div>
                   <div class="col-12 col-md-6 col-lg-4">
                      <div class="footer-item">
-                        <a href="https://twitter.com/ORCA_India?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @ORCA_India</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                       <a class='twitter-timeline' data-handle='ORCA_India' data-height='500' data-theme='dark' ></a>
+<script src='https://www.athabasca.dev/content/scripts/widget.js'></script>
                      </div>
                   </div>
                </div>

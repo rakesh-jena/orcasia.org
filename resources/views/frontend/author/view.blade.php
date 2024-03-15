@@ -83,63 +83,65 @@
     <div class="container">
         <!-- Posts -->
         <div id="load-more-1" class="row g-5" data-display="6" data-columns="3">
-            @foreach($articles as $article)
-            <?php $category = App\Models\Category::where('id', $article->category)->first();?>
-            <div class="col-12 col-md-6 col-lg-4 load-more-item-1">
-                <div class="card has-image shadow parent">
+            @foreach(collect($articles)->sortByDesc('created_at') as $article)
+                <?php $category = App\Models\Category::where('id', $article->category)->first(); ?>
+                <div class="col-12 col-md-6 col-lg-4 load-more-item-1">
+                    <div class="card has-image shadow parent">
 
-                    <!-- Label -->
-                    <span class="label-vertical to-bottom-right-out">
-                        <span class="label-line gray"></span>
-                        <span class="label-text gray"><i class="icon fas fa-user-circle"></i> {{$user->name}}</span>
-                    </span>
-                    <!-- Image -->
-                    <div class="image-wrapper rounded-top hover-zoom">
-                        <img src="{{URL::asset('images/article/'.$article->title_image)}}" alt="Image name" class="image" />
-                    </div>
-                    <!-- Body -->
-                    <div class="card-body rounded-bottom bg-color white">
-                        <h3 class="title text-style-11 black">{{ $article->title }}</h3>
-                        <p class="description line-clamp-3">{{ $article->subtitle }}</p>
-                        <!-- Button -->
-
-                        <div class="tag-cloud mt-2">
-                        <a href="#your-link" class="link">                      
-                            <span class="badge outline gray-50 primary-hover">
-                            <span class="badge-text gray white-hover"><?=date_format(date_create($article->created_at), "F j, Y")?></span>
-                            </span>
-                        </a>
-                        <a href="{{url('category/'.$category->slug)}}" class="link">                      
-                            <span class="badge outline gray-50 primary-hover">
-                            <span class="badge-text gray white-hover">{{$category->category}}</span>
-                            </span>
-                        </a>
-                        </div>
-                        <div class="button-wrapper align-h-right">
-                        <span class="arrow-button cross scheme-1 primary">
-                            <span class="arrow">
-                            <span class="item"></span>
-                            <span class="item"></span>
-                            </span>
-                            <span class="line"></span>
-                            <span class="text">READ MORE</span>
+                        <!-- Label -->
+                        <span class="label-vertical to-bottom-right-out">
+                            <span class="label-line gray"></span>
+                            <span class="label-text gray"><i class="icon fas fa-user-circle"></i> {{$user->name}}</span>
                         </span>
+                        <!-- Image -->
+                        <div class="image-wrapper rounded-top hover-zoom">
+                            <img src="{{URL::asset('images/article/'.$article->title_image)}}" alt="Image name" class="image" />
                         </div>
+                        <!-- Body -->
+                        <div class="card-body rounded-bottom bg-color white">
+                            <h3 class="title text-style-11 black">{{ $article->title }}</h3>
+                            <p class="description line-clamp-3">{{ $article->subtitle }}</p>
+                            <!-- Button -->
+
+                            <div class="tag-cloud mt-2">
+                                <a href="#your-link" class="link">                      
+                                    <span class="badge outline gray-50 primary-hover">
+                                        <span class="badge-text gray white-hover"><?=date_format(date_create($article->created_at), "F j, Y")?></span>
+                                    </span>
+                                </a>
+                                <a href="{{url('category/'.$category->slug)}}" class="link">                      
+                                    <span class="badge outline gray-50 primary-hover">
+                                        <span class="badge-text gray white-hover">{{$category->category}}</span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="button-wrapper align-h-right">
+                                <span class="arrow-button cross scheme-1 primary">
+                                    <span class="arrow">
+                                        <span class="item"></span>
+                                        <span class="item"></span>
+                                    </span>
+                                    <span class="line"></span>
+                                    <span class="text">READ MORE</span>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Link -->
+                        <a href="{{url('article/'.$article->id)}}/{{$article->slug}}" class="full-link"></a>
                     </div>
-                    <!-- Link -->
-                    <a href="{{url('article/'.$article->id)}}/{{$article->slug}}" class="full-link"></a>
                 </div>
-            </div>
             @endforeach
         </div>
         <div class="mt-4 text-center">
             <!-- Button -->
             <button id="load-more-button-1" class="button double-edge transparent black-hover">
-              <span class="button-text black white-hover">Load more</span>
-              <i class="fa-solid fa-rotate-right button-icon black white-hover"></i>
-              <span class="overlay gray-50 magnetic-effect"></span>
+                <span class="button-text black white-hover">Load more</span>
+                <i class="fa-solid fa-rotate-right button-icon black white-hover"></i>
+                <span class="overlay gray-50 magnetic-effect"></span>
             </button>
-          </div>
+        </div>
     </div>
 </section>
+
+
 @endsection

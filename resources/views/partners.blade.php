@@ -90,7 +90,7 @@
 </p>
                   </div>
                   <div class="col-lg-4">
-                    <a href="https://niice.org.np/" target="_blank" class="item hover-grayscale">
+                    <a href="https://ppf.org.in/" target="_blank" class="item hover-grayscale">
                       <div class="image-wrapper">
                         <div class="overlay has-border rounded black"></div>
                         <img style=" padding: 3rem!important;" src="{{ URL::asset('images/PPF_Logo.png') }}" class="image p-1 fit-cover" />

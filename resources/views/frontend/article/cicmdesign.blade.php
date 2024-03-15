@@ -12,7 +12,12 @@
 @endsection
 
 @section('content')
-
+<?php
+$art = App\Models\Article::where('id', $article->id);
+$art->update([
+    'views' => $article->views+1,
+]);
+?>
 <style>
     p { 
    color: #000!important; 

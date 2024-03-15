@@ -12,7 +12,8 @@
                     <div class="d-flex align-items-center">
                         <h5 class="card-title">Orcafiles</h5>
                     </div>
-                    <table class="table table-responsive align-middle">
+                    <div class="table-responsive">
+                        <table class="table align-middle">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -55,6 +56,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
         </section>
